@@ -1,48 +1,38 @@
 <?php 
 
+// Hero Header
+
+echo '<div class="uk-position-relative">
+		<div class="uk-inline uk-overflow-hidden">
+    	<img  class="imgHeight" src="assets/images/back1.jpg" alt="" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+    	   <div class="uk-position-center uk-overlay uk-text-center">
+    	   		<a class="uk-logo"><img class="moon1" src="assets/images/grav.svg"></a>
+    	  		<br><br>
+    			<h1 class="heroWhite">A collection of popular brands just for you.</h1>
+            	<div class="heroWhite"><h2 class="heroWhite">Welcome please take the
+            		<span style="color: yellow;">lead.</span>
+				</h2>
+				</div>
+            	<h5 class="heroWhite">Browse the shelf.</h5><br><br><br>
+            	<div class="arrow bounce"><span class="uk-margin-small-right heroWhite" uk-icon="icon: chevron-down; ratio: 2"></span></div>
+				</div>
+           </div>
+    	</div>';
+
 function display_title(){
 	echo "Shop";
 };
 
 function display_content(){
+
 	require 'connection.php';
 	if (isset($_SESSION['username'])) {
 	$username = $_SESSION['username'];
 	}
 
-	echo '<div class="uk-section uk-section-large uk-section-default uk-padding-remove-bottom">
-		<div class="uk-container-large uk-container uk-margin-xlarge-left uk-margin-xlarge-right uk-border-rounded">
-			<div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="width: 200; min-height: 100; max-height: 500;animation: push; autoplay: true; autoplay-interval: 4000">
-			    <ul class="uk-slideshow-items">
-			        <li>
-			            <img src="assets/images/slider1.jpg" alt="" uk-cover>
-			            <div class="uk-position-center uk-position-small uk-text-center">
-			                <h2 uk-slideshow-parallax="x: 100,-100">Heading</h2>
-			                <p uk-slideshow-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
-			            </div>
-			        </li>
-			        <li>
-			            <img src="assets/images/slider2.jpg" alt="" uk-cover>
-			            <div class="uk-position-center uk-position-small uk-text-center">
-			                <h2 uk-slideshow-parallax="x: 100,-100">Heading</h2>
-			                <p uk-slideshow-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
-			            </div>
-			        </li>
-			        <li>
-			            <img src="assets/images/slider3.jpg" alt="" uk-cover>
-			            <div class="uk-position-center uk-position-small uk-text-center">
-			                <h2 uk-slideshow-parallax="y: -50,0,0; opacity: 1,1,0">Heading</h2>
-			                <p uk-slideshow-parallax="y: 50,0,0; opacity: 1,1,0">Lorem ipsum dolor sit amet.</p>
-			            </div>
-			        </li>
-			    </ul>
+	// Product Slider
 
-			    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-			    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-			</div>
-		</div>	
-	</div>';
-	echo '<div class="uk-section uk-section-default">
+	echo '<div class="uk-section uk-section-default uk-margin-top-large">
 	    <div class="uk-container uk-container-small">
 	    	<div class="uk-margin-large-bottom uk-text-center">
 	    		<h3 class="setPink uk-flex-middle">Most Popular</h3>
@@ -52,34 +42,34 @@ function display_content(){
 			    <div class="uk-position-relative uk-visible-toggle uk-flex-middle" uk-slider="autoplay: true; autoplay-interval: 2000">
 				    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m uk-flex-middle uk-grid-large uk-text-center">
 				        <li>
-				            <img src="assets/images/smart1.jpg" alt="">
-				            <h2>Fitbit</h2>
-				            <p>Ionic</p>
+				            <img src="assets/images/smart6.jpg" alt="">
+				            <h2>Moto</h2>
+				            <p>360 Sport 45mm</p>
 				        </li>
 				        <li>
-				            <img src="assets/images/casual1.jpg" alt="">
+				            <img src="assets/images/casual5.jpg" alt="">
+				            <h2>Nixon</h2>
+				            <p>Sentry Browned Out</p>
+				        </li>
+				        <li>
+				            <img src="assets/images/luxury5.jpg" alt="">
+				            <h2>Brietling</h2>
+				            <p>Chronomat GMT</p>
+				        </li>
+				        <li>
+				            <img src="assets/images/smart4.jpg" alt="">
+				            <h2>Apple</h2>
+				            <p>Nike GPS 42mm</p>
+				        </li>
+				        <li>
+				            <img src="assets/images/casual6.jpg" alt="">
 				            <h2>Luminox</h2>
-				            <p>Soldier</p>
+				            <p>SET Scott Cassel</p>
 				        </li>
 				        <li>
-				            <img src="assets/images/luxury1.jpg" alt="">
-				            <h2>Omega</h2>
-				            <p>Prestige</p>
-				        </li>
-				        <li>
-				            <img src="assets/images/smart2.jpg" alt="">
-				            <h2>Garmin</h2>
-				            <p>Forerunner</p>
-				        </li>
-				        <li>
-				            <img src="assets/images/casual2.jpg" alt="">
-				            <h2>Tissot</h2>
-				            <p>Caveman</p>
-				        </li>
-				        <li>
-				            <img src="assets/images/luxury2.jpg" alt="">
+				            <img src="assets/images/luxury3.jpg" alt="">
 				            <h2>Rolex</h2>
-				            <p>Padeguire</p>
+				            <p>Submariner Steel Gold</p>
 				        </li>
 				    </ul>
 				    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
@@ -88,6 +78,8 @@ function display_content(){
 			</div>
 		</div>
 	</div> ';
+
+	// Category Filter Button
 
 		$filter = isset($_GET['category']) ? $_GET['category'] : 'ALL';
 
@@ -112,12 +104,20 @@ function display_content(){
 		echo  "</div>
 	        </form>";
 
+	    // Add items(ADMIN) and Cart(USER)
+
 	    if (isset($_SESSION['username']) && $_SESSION['username'] == 'Admin') {
 			echo "<button class='uk-button uk-button-default uk-align-left' id='add_item' href='#modal-sections' uk-toggle >ADD ITEM</button>";
-		} else {
+
+		} else if (isset($_SESSION['username'])) {
+
+		// Cart Button
+
 			echo "<button class='uk-button uk-button-default uk-align-left' uk-toggle='target: #offcanvas-flip'>CART</button>";	
 			echo "<div id='offcanvas-flip' class='cartColor' uk-offcanvas='flip: true; overlay: true'>";
 			echo "<div class='uk-offcanvas-bar'>";
+
+		// Cart Content
 
 			if (isset($_SESSION['username'])) {
 				echo "<h2 class='cartColor uk-text-center'>".$username."'s Cart</h2>";
@@ -136,30 +136,33 @@ function display_content(){
 					$subtotal = $row['price'] * $quantity;
 					$total = $total + $subtotal;
 
-					echo "<div class='uk-card uk-card-default uk-card-body uk-margin cartColor uk-text-center'>";
+					echo "<div class='uk-card uk-card-default uk-card-body uk-margin cartColor uk-text-center' enctype='multipart/form-data'>";
 					echo "<form class='container' method='POST' action='changequantity.php?index=$index'>";
 					echo "<img src='$image'>";
     				echo "<h3 class='uk-card-title uk-text-center uk-padding-remove'>".$brand."</h3>";
 				   	echo "<p class='uk-margin-remove uk-text-center uk-padding-remove'>".$model."</p>";
 				    echo "<p class='uk-text-center uk-padding-remove'>Total: P".$subtotal."</p>";
-				    echo "<span class='uk-margin-remove-top uk-text-center'>Quantity: ".$quantity."</span>";
+				    echo "<span class='uk-margin-remove-top uk-text-center' name='quantity'>Quantity: ".$quantity."</span>";
 					echo "<input type='number' class='uk-input uk-text-center cartColor uk-padding-remove' name='change_quantity' min=1 value=1>";
 					echo "<button id='delete' type='submit' class='uk-button uk-button-secondary uk-text-center'>Quantity</button>";
-					echo "<a href='deletecart.php?index=$index'><button type='button' class='uk-button uk-button-secondary'>Remove</button></a></form></div>";	
+					echo "<a href='deletecart.php?index=$index'><button type='button' class='uk-button uk-button-secondary'>Remove</button></a></div>";	
 					
 				}
 			}	
 
 			echo "<div class='uk-card-default uk-padding-small uk-margin-top cartColor'>";
 			echo "<h2 class='cartColor uk-text-center'>TOTAL: Php ".$total."</h2>";
-			echo "<span><button class='uk-button uk-button-secondary uk-text-center'>Check Out</button><span>";
+			echo "<span><button type ='submit'class='uk-button uk-button-secondary uk-text-center'>Check Out</button><span></form>";
 
 			echo "</div>";
 			echo "</div>";
         	echo "</div>";	
-		}
+
+		} // End of User Cart
 
 		echo "</div></div></div>";
+
+		// Items 
 
 		$sql = "SELECT * FROM shops";
 		$result = mysqli_query($conn,$sql);
@@ -191,12 +194,14 @@ function display_content(){
 				echo '</div></div>';
 
 			}
-		}
+		} // End of Items Loop
+
+		// Universal Modal
 		echo '<div id="modal-sections" uk-modal>
 				<div class="uk-modal-dialog" id="modal-body1">
 					<button class="uk-modal-close-default" type="button" uk-close></button>
    						<div class="uk-modal-header">
-        					<h2 class="uk-modal-title uk-text-center">Title</h2>
+        					<h2 class="uk-modal-title uk-text-center"><a class="uk-logo"><img src="assets/images/gravblack.svg" class="moonModal uk-text-center"></a></h2>
    						</div>
     				<div id="modal-body">
     					<div class="uk-modal-body">
@@ -233,6 +238,7 @@ require "template.php";
 	});
 
 // EDIT ITEM 
+
 	$(".render_modal_edit").click(function(){
 			var index1 = $(this).data('index')
 			$.ajax({
@@ -265,6 +271,7 @@ require "template.php";
 	})
 
 // PURCHASE
+
 	$(".render_modal_cart").click(function(){
 		var index = $(this).data('index')
 		$.ajax({

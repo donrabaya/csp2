@@ -28,32 +28,25 @@
 	<!-- Navigation Bar -->
 	<div class="uk-position-relative">
 		<div class="uk-inline">
-    	<img  src="assets/images/watch3.jpg" alt="">
-    	  <div class="uk-position-large uk-position-center-left uk-text-center" id="hero">
-                <span>
-                	<div class="uk-position-relative">
-						<div class="uk-inline">
-                			<img src="assets/images/back.png">
-                				<div class="uk-position-center">
-                					<span>
-                						<p class="heroWhite">HIGH QUALITY WATCHES</p>
-                						<h2 class="uk-heading-primary uk-margin-remove-vertical heroBlack">STAY ON TRACK</h2>
-                						<p class="heroWhite">LEAD. CAPTURE. TREND.</p>
-                					</span>
-                				</div>
-                		</div>
-                	</div>
-                </span>
-            </div>
+    	<img  class="imgHeight uk-animation-kenburns" src="assets/images/back1.jpg" alt="" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+    	   <div class="uk-position-center uk-overlay uk-text-center">
+    	<div class='container'>
+  <span class='pulse-button'>Create</span>
+</div>
+    			<h1 class="heroWhite">It's time to grow up and get a watch!</h1>
+            	<h3 class="heroWhite">We offer high-end products to help you trend.</h3>
+            	<h5 class="heroWhite">Explore the station now.</h5>
+            	<h5 class="heroWhite arrow-down"></h5>
+           </div>
     	</div>
 
     	<!-- Desktop Nav -->
     	<div class="uk-position-top uk-visible@m">
-	    	<nav class="uk-navbar-container uk-navbar navColor" uk-navbar>
+	    	<nav class="uk-navbar-container uk-navbar uk-navbar-transparent" uk-navbar>
 	    		<div class="uk-navbar-left">
         			<div class="uk-container">
         				<ul class="uk-navbar-nav uk-flex-middle">
-            				<li><a class="uk-logo moon"><img src="assets/images/grav.svg"></a></li>
+            				<li><a class="uk-logo moon uk-padding-top"><img src="assets/images/grav.svg"></a></li>
             				<li class="heroWhite">TIME STATION</li>
             			</ul>
         			</div>

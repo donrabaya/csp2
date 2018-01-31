@@ -27,7 +27,6 @@
 
 	<?php require "partials/navbar.php"; ?>
 
-
 	<?php display_content(); ?>
 	
 

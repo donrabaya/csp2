@@ -29,13 +29,8 @@ function isValid() {
 	}
 };
 
-// AJAX
+// Hamburger Menu
+$('.menu').click(function(){
+	$(this).toggleClass('close')
+});
 
-	// $(".render_modal_edit").click(function(){
-	// 	var index = $(this).data('index')
-	// 	$.post('render_modal_edit.php', {
-	// 		'index' : index
-	// 	}, function(data){
-	// 		$('#modal-body2').html(data);
-	// 	});
-	// });

@@ -1,24 +1,24 @@
 <?php 
 
+// Hero Header
+
 echo '<div class="uk-position-relative">
-		<div class="uk-inline">
-    	<img  src="assets/images/watch3.jpg" alt="">
-    	  <div class="uk-position-large uk-position-center-left uk-text-center" id="hero">
-                <span>
-                	<div class="uk-position-relative">
-						<div class="uk-inline">
-                			<img src="assets/images/back.png">
-                				<div class="uk-position-center">
-                					<span>
-                						<p class="heroWhite">HIGH QUALITY WATCHES</p>
-                						<h2 class="uk-heading-primary uk-margin-remove-vertical heroWhite">STAY ON TRACK</h2>
-                						<p class="heroWhite">LEAD. CAPTURE. TREND.</p>
-                					</span>
-                				</div>
-                		</div>
-                	</div>
-                </span>
-            </div>
+		<div class="uk-inline uk-overflow-hidden">
+    	<img  class="imgHeight" src="assets/images/shopback.jpg" alt="" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+    	   <div class="uk-position-center uk-overlay uk-text-center">
+    	   		<br>
+    	   		<a class="uk-logo"><img class="moon1" src="assets/images/grav.svg"></a>
+    	  		<br class="displayNone"><br class="displayNone">
+    			<h1 class="heroWhite">The most trusted online watch shop in the web</h1>
+            	<div class="heroWhite"><h2 class="heroWhite">High-end products to help you set the
+  					<span style="color: yellow;">trend.</span>
+				</h2>
+				</div>
+				<br class="displayNone"><br class="displayNone">
+            	<h5 class="heroWhite">Explore the station now.</h5><br class="displayNone"><br class="displayNone"><br class="displayNone">
+            	<div class="arrow bounce"><span class="uk-margin-small-right heroWhite" uk-icon="icon: chevron-down; ratio: 2"></span></div>
+				</div>
+           </div>
     	</div>';
 
 function display_title(){
@@ -27,7 +27,7 @@ function display_title(){
 
 function display_content(){
 	echo '
-		<div id="brand" class="uk-section uk-section-default">
+		<div id="brand" class="uk-section uk-section-default uk-margin-top">
 	    <div class="uk-container uk-container-small">
 	    	<div class="uk-margin-large-bottom uk-text-center">
 	    		<h3 class="setPink uk-flex-middle">Your Options</h3>
@@ -69,25 +69,21 @@ function display_content(){
 				</div>
 			</div>
 		</div>
-	</div> <!-- End of section 2 -->
+	</div> <!-- End of section 1 -->
 
 	<!-- SECTION 2 -->
     <div class="uk-section uk-section-muted uk-margin-remove-top">
     	<div class="uk-container uk-text-center">
-    			<div class="uk-container uk-container-small">
-    				<div class="uk-grid uk-grid-stack" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: > .setPink > .hrColor; delay: 500; repeat: true">
-		    		<div>			
-			    		<h3 class="setPink">Top of the line products</h3>
-			    		<div class="uk-divider-small uk-scrollspy-inview uk-animation-slide-bottom-medium hrColor"></div>
-			    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			    		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			    		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			    		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		    		</div> 
+    			<div class="uk-container uk-container-small uk-text-center" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: > .setPink > .hrColor; delay: 500; repeat: true">
+    				<div class="uk-grid uk-grid-stack uk-text-center">
 	    		</div>   			
     		</div>
+
+			<div class="uk-text-center">			
+		    		<h3 class="setPink">Top of the line products</h3>
+		    		<div class="uk-divider-small uk-scrollspy-inview uk-animation-slide-bottom-medium hrColor"></div>
+		    		<p>100% authentic products of different styles, ranging from casual, luxury and smart watches.</p>
+	    	</div> 
 
     		<div class="uk-flex-middle uk-flex-center uk-grid-margin uk-grid" uk-grid>
     			<div class="uk-width-expand@m uk-flex-first@l">
@@ -103,8 +99,7 @@ function display_content(){
     			<div class="uk-width-expand@m uk-float-left">
    					<div class="uk-panel" uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
     					<h3 class="uk-text-center setPink">Lead The Team</h3>
-    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    					tempor incididunt ut labore et dolore magna aliqua. </p>
+    					<p>Bring your A game and feel the power towards your peers, a collection of affordable luxury watches are up for grabs.</p>
     				</div>
     			</div>
     		</div>
@@ -123,8 +118,7 @@ function display_content(){
     			<div class="uk-width-expand@m">
     				<div class="uk-panel" uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
     					<h3 class="uk-text-center setPink">Style It Out</h3>
-    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    					tempor incididunt ut labore et dolore magna aliqua. </p>
+    					<p>Street fashion, Sunday vibe, impromptu parties? We got you covered with our wide array of casual watches.</p>
     				</div>
     			</div>
     		</div>
@@ -143,8 +137,7 @@ function display_content(){
     			<div class="uk-width-expand@m">
     				<div class="uk-panel" uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
     					<h3 class="uk-text-center setPink">Travel Companion</h3>
-    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    					tempor incididunt ut labore et dolore magna aliqua. </p>
+    					<p>What better way to explore different time zones with a mind on your wrist, dive into our vault of smart watches and see the magic before your own eyes.</p>
     				</div>
     			</div>
     		</div>
@@ -152,7 +145,7 @@ function display_content(){
     </div> <!-- End of 2nd Section -->
       
     <!-- SECTION 3 -->
-    <div class="uk-section uk-section-default">
+    <div class="uk-section uk-section-">
     	<div class="uk-container" >
     		<div class="uk-text-center">
     			<h3 class="setPink uk-flex-middle">Trending</h3>
@@ -161,65 +154,41 @@ function display_content(){
     		<div class="uk-child-width-1-3@m uk-text-center" uk-grid uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; repeat: true; delay: 200">
     			<div>
 		        	<div class="uk-card-small uk-card uk-card-default uk-card-body uk-text-center ">		        		
-			        	<img src="assets/images/herowatch1.jpeg" class="uk-border-rounded">
-			        	<h3>Seiko</h3>
-			        	<button class="uk-button uk-button-default"><p class="setPink uk-margin-remove-bottom">Purchase</p></button>
-			        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			        	tempor incididunt ut labore et dolore magna aliqua.</p>
+			        	<img src="assets/images/herowatch1.jpeg" class="uk-border-rounded imgSize">
+			        	<h3>Apple Watch</h3>
+			        	<a href="shop.php"><button class="uk-button uk-button-default" href="shop.php"><p class="setPink uk-margin-remove-bottom">Shop Here</p></button></a>
+			        	<p>No doubt the most trendiest smart watch brand to date.</p>
 		        	</div>
 		        </div>
 		        <div>			 
 		        	<div class="uk-card-small uk-card uk-card-default uk-card-body uk-text-center ">		        		
-			        	<img src="assets/images/herowatch2.jpeg" class="uk-border-rounded">
-			        	<h3>Hublot</h3>
-			        	<button class="uk-button uk-button-default"><p class="setPink uk-margin-remove-bottom">Purchase</p></button>
-			        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			        	tempor incididunt ut labore et dolore magna aliqua.</p>
+			        	<img src="assets/images/herowatch3.jpeg" class="uk-border-rounded imgSize">
+			        	<h3>Nixon</h3>
+			        	<a href="shop.php"><button class="uk-button uk-button-default" href="shop.php"><p class="setPink uk-margin-remove-bottom">Shop Here</p></button></a>
+			        	<p>The brand of the youth lifestyle market, affordable and funky.</p>			   
 		        	</div>
 		        </div>
 		        <div>		 
 		        	<div class="uk-card-small uk-card uk-card-default uk-card-body uk-text-center ">		        		
-			        	<img src="assets/images/herowatch3.jpeg" class="uk-border-rounded">
-			        	<h3>Luminox</h3>
-			        	<button class="uk-button uk-button-default"><p class="setPink uk-margin-remove-bottom">Purchase</p></button>
-			        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			        	tempor incididunt ut labore et dolore magna aliqua.</p>
+			        	<img src="assets/images/herowatch2.jpeg" class="uk-border-rounded imgSize">
+			        	<h3>Tag Heuer</h3>
+			        	<a href="shop.php"><button class="uk-button uk-button-default"><p class="setPink uk-margin-remove-bottom">Shop Here</p></button></a>
+			        	<p>Make heads turn and stay classy and sassy with Tag Heuer.</p>
 		        	</div>
 		        </div>
 			</div>
        	</div>
     </div> <!-- End of section 3 -->
-    <!-- SECTION 4 -->
-     <div class="uk-section uk-section-muted" uk-scrollspy="cls:uk-animation-fade; repeat: true;">    	
-	    <div class="uk-container uk-container-small uk-text-center">
-		    <div uk-countdown="date: 2018-01-31T09:00:56+00:00">
-		    <h3 class="setPink">COUNTDOWN TO NEXT SALE</h3>
-		    <hr class="uk-divider-small"><br>
-		    <span class="uk-countdown-number uk-countdown-days"></span>
-		    <span class="uk-countdown-separator">:</span>
-		    <span class="uk-countdown-number uk-countdown-hours"></span>
-		    <span class="uk-countdown-separator">:</span>
-		    <span class="uk-countdown-number uk-countdown-minutes"></span>
-		    <span class="uk-countdown-separator">:</span>
-		    <span class="uk-countdown-number uk-countdown-seconds"></span>
-			</div>
-	    </div>
-	</div> <!-- end of section 4 -->
 	
-	<!-- SECTION 5 -->
-    <div id="services" class="uk-section uk-section-default">
+	<!-- SECTION 4 -->
+    <div id="services" class="uk-section uk-section-muted">
     	<div class="uk-container">
     		<div class="uk-child-width-expand@m uk-text-center uk-flex-middle" uk-grid uk-grid uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; repeat: true">
     			<div>
 	    			<div class="uk-panel uk-card-large uk-card uk-card-default uk-card-body uk-text-left">
 	    				<p class="setPink">Products</p>
 	            		<h2 class="uk-card-title">High quality watches at the most competitive prices</h2>
-	            		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	            		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	            		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	            		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	            		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	            		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	            		<p>We showcase a collection of casual, luxury and smart watches. Offered to you on the most competitive price in the web. Our brands ranges from Apple, Seiko, Omega and Luminox to name a few. Custom brand or models will be available upon request. Register now and explore your options with us!</p>
 	        		</div>
         		</div>
         		<div>
@@ -228,28 +197,28 @@ function display_content(){
 					        <div class="uk-card uk-card-hover uk-card-body uk-margin-remove uk-padding-small">
 					        	<span uk-icon="icon: bolt"></span>
 					            <h3 class="uk-card-title">Top of the line</h3>
-					            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					            <p>We are allergic to fake items, this page can only accommodate those of high quality.</p>
 					        </div>
 					    </div>
 					    <div>
 					        <div class="uk-card  uk-card-hover uk-card-body uk-margin-remove uk-padding-small">
 					        	<span uk-icon="icon: grid"></span>
 					            <h3 class="uk-card-title">Choices</h3>
-					            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					            <p>Browse our shop now. Warning, high risk of feeling like a kid in a candy store.</p>
 					        </div>
 					    </div>
 					    <div>
 					        <div class="uk-card  uk-card-hover uk-card-body uk-margin-remove uk-padding-small">
 					        	<span uk-icon="icon: credit-card"></span>
 					            <h3 class="uk-card-title">Money Back</h3>
-					            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					            <p>If product satisfaction is under-par, wed be happy to work around a way to makes both parties hit the boogie.</p>
 					        </div>
 					    </div>
 					    <div>
 					        <div class="uk-card uk-card-hover uk-card-body uk-margin-remove uk-padding-small">
 					        	<span uk-icon="icon: lifesaver"></span>
 					            <h3 class="uk-card-title">Free Shipping</h3>
-					            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					            <p>Wherever you are our shipping is free. Do you feel the love?</p>
 					        </div>
 					    </div>
 					</div>
@@ -257,10 +226,10 @@ function display_content(){
     		</div>
 
     	</div>
-    </div> 	<!-- end of section 5 -->
+    </div> 	<!-- end of section 4 -->
 
-    <!-- SECTION 6 -->
-    <div id="team" class="uk-section uk-section-muted">
+    <!-- SECTION 5 -->
+    <div id="team" class="uk-section uk-section-default">
     	<div class="uk-container">
     		<div class="uk-text-center">
     			<h3>OUR TEAM</h3>
@@ -283,19 +252,19 @@ function display_content(){
 			    <div>
 			        <div class="uk-card uk-card-default uk-card-body">
 			        	<img src="assets/images/team3.png" class="uk-border-rounded">
-			        	<h3>Monet Cockaliong</h3>
+			        	<h3>Kris Aquino</h3>
 			        	<p>HR Manager</p>
 			        </div>
 			    </div>
 			    <div>
-			        <div class="uk-card uk-card-default uk-card-body">
+			        <div class="uk-height-large uk-card uk-card-default uk-card-body uk-flex uk-flex-center uk-flex-middle senior">
 			        	<h3>Senior Team</h3>
 			        </div>
 			    </div>
 			</div>   
     		<div class="uk-grid-small uk-child-width-expand@s uk-text-center uk-flex-middle" uk-grid uk-scrollspy="cls: uk-animation-slide-left; target: > div > .uk-card; delay: 200; repeat: true" uk-height-match="target: > div > .uk-card; row: false">
 			    <div>
-			        <div class="uk-card uk-card-default uk-card-body">
+			        <div class="junior uk-height-large uk-card uk-card-default uk-card-body uk-flex uk-flex-center uk-flex-middle">
 			        	<h3>Junior Team</h3>
 			        </div>
 			    </div>
@@ -309,20 +278,20 @@ function display_content(){
 			    <div>
 			        <div class="uk-card uk-card-default uk-card-body">
 			        	<img src="assets/images/team5.png" class="uk-border-rounded">
-			        	<h3>Ski Averilla</h3>
+			        	<h3>Agot Isidro</h3>
 			        	<p>Social Media Manager</p>
 			        </div>
 			    </div>
 			    <div>
 			        <div class="uk-card uk-card-default uk-card-body">
 			        	<img src="assets/images/team6.png" class="uk-border-rounded">
-			        	<h3>Chun Li</h3>
+			        	<h3>Sandara Park</h3>
 			        	<p>Language Translator</p>
 			        </div>
 			    </div>
 			</div>   		
     	</div>    	
-    </div> <!-- End of section 6 -->
+    </div> <!-- End of section 5 -->
 
 
 	';
@@ -332,3 +301,8 @@ require "template.php";
 
 
 ?>
+
+
+
+
+

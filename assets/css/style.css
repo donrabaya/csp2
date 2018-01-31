@@ -4,14 +4,16 @@
 	box-sizing: border-box;
 	font-family: 'Lato', sans-serif !important;
 }
+/* MAIN CSS */
+
 .height {
 	height: 5vw !important;
 }
+.imgHeight {
+	height: 100%;
+}
 .cartColor {
 	color: black !important;
-}
-.navColor {
-	background: linear-gradient(to left, #000000, #FF4870) !important;
 }
 .heroWhite {
 	color: white !important; 
@@ -20,26 +22,125 @@
 	color: black !important;
 	font-weight: 5000;
 }
-.bottom {
-	border-bottom: red;
-}
 .setPink {
 	color: #FF4870 !important;
 }
-.moon {
-	width: 6em;
+.moonFoot {
+	width: 3em;
+}
+.moonModal {
+	width: 2em;
 }
 .moon1 {
-	width: 2em !important;
-}
-#hero {
-	left: 35px !important;
-	transform:  translateY(-50%) translateY(-50px) !important;
+	width: 5em !important;
 }
 .uk-offcanvas-bar, b {
 	background-color: white !important;
 	color: black !important;
 }
+.login {
+	background-image: url("../images/back2.jpg");
+}
+.hover {
+	cursor: pointer;
+}
+.senior {
+	background: linear-gradient(135deg,#FE8155,#F95462,#ED7AA3) !important;
+}
+.junior {
+	background: linear-gradient(135deg,#605cee,#7571c8) !important;
+}
 li {
 	list-style-type: none;
 }
+.form {
+	width: 80%;
+}
+
+/*Animations*/
+
+/* Down Arrow */
+.arrow
+{
+  position: relative;
+  bottom: -2rem;
+  left: 50%;
+  margin-left:-20px;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Hamburger Menu */
+
+.main-item {
+	width: 100px;
+	height: 100px !important;
+	position: relative;
+}
+.line {
+	position: absolute;
+	height: 3px;
+	width: 28%;
+	background: white;
+	border-radius: 8px;
+	transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
+}
+.line1 {
+	top: 25%;
+}
+.line2 {
+	top: 35%;
+}
+.line3 {
+	top: 45%;
+}
+
+.menu.close .line1 {
+	transform: rotate(45deg);
+	top: 35%;
+}
+.menu.close .line2, .menu.close .line3  {
+	transform: rotate(-45deg);
+	top: 35%;
+}
+
+/*MEDIA QUERY*/
+
+@media only screen and (max-width: 415px) {
+ 	.displayNone {
+ 		display: none;
+ 	}
+ 	h1 {
+ 		font-size: 1em !important;
+ 	}
+ 	h2 {
+ 		font-size: 12px !important;
+ 	}
+ 	h5	{
+ 		font-size: 10px !important;
+ 	}
+ 	.moon1 {
+		width: 4em !important;
+	}
+ }
+
+
+
+

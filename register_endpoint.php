@@ -15,6 +15,6 @@ mysqli_query($conn,$sql) or die(mysqli_error($conn));
 
 $_SESSION['username'] = $username;
 $_SESSION['type_id'] = 1;
-header('location: login.php');
+header('location: shop.php');
 
 ?>

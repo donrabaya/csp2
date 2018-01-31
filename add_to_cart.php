@@ -4,6 +4,10 @@ session_start();
 
 $index = $_GET['index'];
 
+if (empty[$_SESSION['cart']]){
+	$_SESSION['cart'] = $index; 
+}
+
 if (isset($_POST['quantity'])) {
 	$quantity = $_POST['quantity'];
 
