@@ -16,7 +16,7 @@ $new_user_id = mysqli_insert_id($conn);
 
 foreach ($_SESSION['cart'] as $index => $quantity) {
 	$sql = "INSERT INTO orders (quantity, shop_id, user_order_id) VALUES ('$quantity', '$index', '$new_user_id')";
-	mysqli_query($conn, $sql) or die(myslqi_error($conn));	
+	mysqli_query($conn, $sql) or die(mysqli_error($conn));	
 }
 
 if (isset($_POST['change_quantity'])) {

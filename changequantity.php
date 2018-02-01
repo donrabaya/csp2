@@ -11,7 +11,7 @@ if (isset($_POST['change_quantity'])) {
 	header('location: shop.php');
 }
 
-$_SESSION['cart'][$index] 
+
 
 
 ?>
