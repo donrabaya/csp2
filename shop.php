@@ -79,7 +79,6 @@ function display_content(){
 		</div>
 	</div> ';
 
-	// Category Filter Button
 
 		$filter = isset($_GET['category']) ? $_GET['category'] : 'ALL';
 
@@ -89,8 +88,10 @@ function display_content(){
 		    		<h3 class="setPink uk-flex-middle uk-align-center">The Collection</h3>
 		    		<hr class="uk-divider-small">';
 
-		echo "<form class='uk-align-left'>
-		<div><select class='uk-select uk-form-width-medium' name='category' onchange='this.form.submit()'><option>ALL</option>";
+	// Category Filter Button
+
+		echo "<div class='uk-align-left'>
+		<div><select class='uk-select uk-form-width-medium filter' name='filter' onchange='filter(this.value)'><option>ALL</option>";
 
 
 		$sql = "SELECT * FROM categories";
@@ -102,11 +103,11 @@ function display_content(){
 		}
 		echo "</select>";
 		echo  "</div>
-	        </form>";
+	        </div>";
 
 	    // Add items(ADMIN) and Cart(USER)
 
-	    if (isset($_SESSION['username']) && $_SESSION['username'] == 'Admin') {
+	    if (isset($_SESSION['username']) && $_SESSION['type_id'] == '2') {
 			echo "<button class='uk-button uk-button-default uk-align-left' id='add_item' href='#modal-sections' uk-toggle >ADD ITEM</button>";
 
 		} else if (isset($_SESSION['username'])) {
@@ -123,9 +124,10 @@ function display_content(){
 				echo "<h2 class='cartColor uk-text-center'>".$username."'s Cart</h2>";
 			}
 
+			$total = 0;
 			if (isset($_SESSION['cart'])) {
 				
-			$total = 0;
+			
 			$subtotal = 0;
 			foreach ($_SESSION['cart'] as $index => $quantity) {
 					$sql = "SELECT * FROM shops WHERE id='$index'";
@@ -137,7 +139,7 @@ function display_content(){
 					$total = $total + $subtotal;
 
 					echo "<div class='uk-card uk-card-default uk-card-body uk-margin cartColor uk-text-center' enctype='multipart/form-data'>";
-					echo "<form class='container' method='POST' action='changequantity.php?index=$index'>";
+					echo "<form class='container' method='POST' action='checkout.php?index=$index'>";
 					echo "<img src='$image'>";
     				echo "<h3 class='uk-card-title uk-text-center uk-padding-remove'>".$brand."</h3>";
 				   	echo "<p class='uk-margin-remove uk-text-center uk-padding-remove'>".$model."</p>";
@@ -152,7 +154,8 @@ function display_content(){
 
 			echo "<div class='uk-card-default uk-padding-small uk-margin-top cartColor'>";
 			echo "<h2 class='cartColor uk-text-center'>TOTAL: Php ".$total."</h2>";
-			echo "<span><button type ='submit'class='uk-button uk-button-secondary uk-text-center'>Check Out</button><span></form>";
+			echo "<span><button type ='submit' class='uk-button uk-button-secondary uk-text-center'>Check Out</button><span></form>";
+
 
 			echo "</div>";
 			echo "</div>";
@@ -163,7 +166,7 @@ function display_content(){
 		echo "</div></div></div>";
 
 		// Items 
-
+		echo "<div id='filter'>";
 		$sql = "SELECT * FROM shops";
 		$result = mysqli_query($conn,$sql);
 		echo '<div class="uk-section uk-section-default uk-padding-remove-top uk-padding-large">
@@ -181,7 +184,7 @@ function display_content(){
 				            <p class="uk-margin-remove">'.$item['model'].'</p>
 				            <p class="uk-margin-remove-top">P'.$item['price'].'</p>';
 
-				if(isset($_SESSION['username']) && $_SESSION['username'] == 'Admin'){
+				if(isset($_SESSION['username']) && $_SESSION['type_id'] == '2'){
 					echo "<button class='uk-button uk-button-default render_modal_edit' href='#modal-sections' uk-toggle data-index='$index'>EDIT</button>";
 					echo "<button class='uk-button uk-button-default uk-margin-small-left delete_modal_body' href='#modal-sections' uk-toggle data-index='$index'>DELETE</button>";
 
@@ -194,7 +197,9 @@ function display_content(){
 				echo '</div></div>';
 
 			}
+
 		} // End of Items Loop
+			echo "</div>";
 
 		// Universal Modal
 		echo '<div id="modal-sections" uk-modal>
@@ -286,9 +291,22 @@ require "template.php";
 		})
 	});
 
+// FILTER
+  function filter(item)
+    {
+        $.ajax({
+            type: "post",
+            url: "filter.php",
+            data: { 
+            	filter: item 
+            },
+            success:function(data){
+                $('#filter').html(data);
+            }
+        });
+    }
+
 </script>
-
-
 
 
 

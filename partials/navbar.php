@@ -36,7 +36,11 @@ if (isset($_SESSION['username'])) {
 	            <div class="uk-navbar-right">
 	            	<ul class="uk-navbar-nav">
 	            		<?php 
-	            		if (isset($_SESSION['username'])) {
+	            		if (isset($_SESSION['username']) && $_SESSION['type_id'] == '2') {
+	            			echo "<li><a href='#' class='heroWhite'>Hi, ".$username.".</a></li>";
+	            			echo "<li><a href='orders.php' class='heroWhite'>ORDERS</a></li>";
+	            			echo "<li class='uk-active'><a href='logout.php'><button class='uk-button uk-button-default tm-button-default heroWhite uk-border-rounded'>LOGOUT</button></a></li>";
+	            		} else if (isset($_SESSION['username'])) {
 	            			echo "<li><a href='#' class='heroWhite'>Hi, ".$username.".</a></li>";
 	            			echo "<li class='uk-active'><a href='logout.php'><button class='uk-button uk-button-default tm-button-default heroWhite uk-border-rounded'>LOGOUT</button></a></li>";
 	            		} else {

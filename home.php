@@ -105,7 +105,7 @@ function display_content(){
     		</div>
 
     		<div class="uk-flex-middle uk-flex-center uk-grid-margin uk-grid" uk-grid>
-    			<div class="uk-width-expand@m uk-flex-first@s uk-flex-first@m uk-flex-last@l">
+    			<div class="uk-width-expand@m uk-flex-first@s uk-flex-last@m uk-flex-last@l">
     				<div class="uk-panel" uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
     					<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
     						<img src="assets/images/watch8.jpg" class="uk-border-rounded">

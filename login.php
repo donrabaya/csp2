@@ -1,4 +1,5 @@
 <?php 
+
 echo '<div class="uk-position-relative">
 		<div class="uk-inline">
     	<img  class="imgHeight" src="assets/images/back2.jpg" alt="">

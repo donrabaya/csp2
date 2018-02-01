@@ -15,6 +15,7 @@ if(mysqli_num_rows($result)>0){
 	$row = mysqli_fetch_assoc($result);
 	$_SESSION['username'] = $username;
 	$_SESSION['type_id'] = $row['type_id'];
+	$_SESSION['id'] = $row['id'];
 	header('location: shop.php');
 } else {
 	header('location: loginerror.php');
