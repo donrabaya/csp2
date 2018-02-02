@@ -120,15 +120,16 @@ function display_content(){
 
 		// Cart Content
 
+			$total = 0;
+			$subtotal = 0;
+
 			if (isset($_SESSION['username'])) {
 				echo "<h2 class='cartColor uk-text-center'>".$username."'s Cart</h2>";
 			}
 
-			$total = 0;
 			if (isset($_SESSION['cart'])) {
 				
 			
-			$subtotal = 0;
 			foreach ($_SESSION['cart'] as $index => $quantity) {
 					$sql = "SELECT * FROM shops WHERE id='$index'";
 					$result = mysqli_query($conn, $sql);
@@ -148,13 +149,15 @@ function display_content(){
 				    echo "<span class='uk-margin-remove-top uk-text-center' name='quantity'>Quantity: ".$quantity."</span>";
 					echo "<input type='number' class='uk-input uk-text-center cartColor uk-padding-remove' name='change_quantity' min=1 value=1>";
 					echo "<button id='delete' type='submit' class='uk-button uk-button-secondary uk-text-center'>Quantity</button>";
-					echo "<a href='deletecart.php?index=$index'><button type='button' class='uk-button uk-button-secondary'>Remove</button></a></div>";						
+					// echo "<a href='changequantity.php?index=$index'><button type='button' class='uk-button uk-button-primary'>QUANTITY</button></a>";	
+					echo "<a href='deletecart.php?index=$index'><button type='button' class='uk-button uk-button-secondary'>Remove</button></a></div>";
+					echo "</form>";						
 			}	
 				}
 
 			echo "<div class='uk-card-default uk-padding-small uk-margin-top cartColor'>";
 			echo "<h2 class='uk-text-center heroBlack'>Total: Php".$total."<h2>";
-			echo "<span><button type ='submit' class='uk-button uk-button-secondary uk-text-center'>Check Out</button><span></form>";
+			echo "<span><a href='checkout.php'><button type ='button' class='uk-button uk-button-secondary uk-text-center'>Check Out</button></a><span></form>";
 
 
 			echo "</div>";

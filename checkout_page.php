@@ -7,7 +7,7 @@ function display_title(){
 
 function display_content(){
 
-	echo "<div class='uk-section uk-section-large'></div>";
+	
 
 }
 

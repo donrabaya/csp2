@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 02, 2018 at 02:38 PM
+-- Generation Time: Feb 02, 2018 at 05:30 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -87,10 +87,8 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `quantity`, `shop_id`, `user_order_id`, `subtotal`) VALUES
-(190, 6, 4, 128, 111000),
-(191, 5, 5, 129, 275000),
-(192, 3, 21, 130, 100000),
-(193, 4, 16, 130, 100000);
+(264, 1, 2, 164, 85000),
+(265, 1, 3, 164, 9500);
 
 -- --------------------------------------------------------
 
@@ -166,9 +164,7 @@ CREATE TABLE `user_orders` (
 --
 
 INSERT INTO `user_orders` (`id`, `account_id`) VALUES
-(128, 19),
-(129, 19),
-(130, 19);
+(164, 19);
 
 --
 -- Indexes for dumped tables
@@ -235,7 +231,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=266;
 
 --
 -- AUTO_INCREMENT for table `shops`
@@ -253,7 +249,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT for table `user_orders`
 --
 ALTER TABLE `user_orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
 
 --
 -- Constraints for dumped tables
