@@ -4,8 +4,6 @@ session_start();
 
 require 'connection.php';
 
-print_r($_SESSION['cart']);
-
 $index = $_GET['index'];
 $account = $_SESSION['id'];
 $subtotal = $_POST['subtotal'];
@@ -24,7 +22,6 @@ foreach ($_SESSION['cart'] as $index => $quantity) {
 
 }
 
-
 if (isset($_POST['change_quantity'])) {
 	$quantity = $_POST['change_quantity'];
 	$_SESSION['cart'][$index] = $quantity;
@@ -32,7 +29,7 @@ if (isset($_POST['change_quantity'])) {
 	header('location: shop.php');
 }
 
-// header('location: shop.php');
+
 
 
 ?>

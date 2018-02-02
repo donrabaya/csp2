@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 02, 2018 at 11:54 AM
+-- Generation Time: Feb 02, 2018 at 02:38 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -46,7 +46,7 @@ CREATE TABLE `accounts` (
 INSERT INTO `accounts` (`id`, `name`, `username`, `email`, `password`, `type_id`, `last_name`, `address`) VALUES
 (3, 'Fedricco', 'Admin', 'fedriccorabaya@gmail.com', 'c464af817287343305cbd6493c593885695df531', 2, 'Rabaya', 'QC'),
 (18, 'Fedricco', 'donrabaya', 'fedriccorabaya@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Rabaya', 'QC'),
-(19, 'John', 'Doe', 'jd@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Doe', 'US');
+(19, 'John', 'Doe', 'jd@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Doe', 'QC');
 
 -- --------------------------------------------------------
 
@@ -87,12 +87,10 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `quantity`, `shop_id`, `user_order_id`, `subtotal`) VALUES
-(113, 1, 2, 89, 9500),
-(114, 1, 3, 89, 9500),
-(115, 1, 2, 90, 0),
-(116, 1, 3, 90, 0),
-(117, 1, 2, 91, 0),
-(118, 1, 3, 91, 0);
+(190, 6, 4, 128, 111000),
+(191, 5, 5, 129, 275000),
+(192, 3, 21, 130, 100000),
+(193, 4, 16, 130, 100000);
 
 -- --------------------------------------------------------
 
@@ -168,11 +166,9 @@ CREATE TABLE `user_orders` (
 --
 
 INSERT INTO `user_orders` (`id`, `account_id`) VALUES
-(38, 3),
-(88, 18),
-(89, 18),
-(90, 18),
-(91, 18);
+(128, 19),
+(129, 19),
+(130, 19);
 
 --
 -- Indexes for dumped tables
@@ -239,7 +235,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
 
 --
 -- AUTO_INCREMENT for table `shops`
@@ -257,7 +253,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT for table `user_orders`
 --
 ALTER TABLE `user_orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
 -- Constraints for dumped tables
@@ -274,7 +270,7 @@ ALTER TABLE `accounts`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`shop_id`) REFERENCES `shops` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user_order_id`) REFERENCES `user_orders` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user_order_id`) REFERENCES `user_orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `shops`

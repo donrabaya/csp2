@@ -4,7 +4,7 @@ session_start();
 
 $index = $_GET['index'];
 
-if (empty[$_SESSION['cart']]){
+if (empty($_SESSION['cart'])) {
 	$_SESSION['cart'] = $index; 
 }
 
@@ -24,8 +24,8 @@ if (isset($_POST['change_quantity'])) {
 	$quantity = $_POST['change_quantity'];
 	$_SESSION['cart'][$index] = $quantity;
 
-	header('location: cart_content.php')
 }
+	header('location: shop.php');
 
 
 ?>

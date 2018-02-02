@@ -52,7 +52,7 @@ function display_content(){
 			                    	<p>'.$email.'</p>
 			                    </div>
 			                	<div class="uk-margin">';	
-			                echo "<a href='edituser.php?index=$id'><button class='uk-button uk-button-primary'>EDIT</button></a>";
+			                echo "<a href='edituser.php?index=$id'><button class='uk-button uk-button-primary uk-margin-right'>EDIT</button></a>";
 			                echo "<a href='deleteuser.php?index=$id'><button class='uk-button uk-button-primary'>DELETE</button></a>";
 			                echo '</div>
 
