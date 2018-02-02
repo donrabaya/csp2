@@ -10,7 +10,19 @@ echo '<div class"uk-section-large uk-section"><div class="uk-position-relative">
 								<div class="uk-margin">
 							        <div class="uk-inline">
 							            <span class="uk-form-icon" uk-icon=""></span>
-							            <input class="uk-input" type="text" name="name" placeholder="Name" required>
+							            <input class="uk-input" type="text" name="name" placeholder="First Name" required>
+							        </div>
+							    </div>
+								<div class="uk-margin">
+							        <div class="uk-inline">
+							            <span class="uk-form-icon" uk-icon=""></span>
+							            <input class="uk-input" type="text" name="lname" placeholder="Last Name" required>
+							        </div>
+							    </div>
+								<div class="uk-margin">
+							        <div class="uk-inline">
+							            <span class="uk-form-icon" uk-icon=""></span>
+							            <input class="uk-input" type="text" name="address" placeholder="Address" required>
 							        </div>
 							    </div>
 							    <div class="uk-margin">

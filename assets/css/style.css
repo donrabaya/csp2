@@ -5,7 +5,12 @@
 	font-family: 'Lato', sans-serif !important;
 }
 /* MAIN CSS */
-
+.total {
+	display: none !important;
+}
+.profile {
+	background-color: black;
+}
 .height {
 	height: 5vw !important;
 }

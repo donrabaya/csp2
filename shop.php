@@ -144,16 +144,16 @@ function display_content(){
     				echo "<h3 class='uk-card-title uk-text-center uk-padding-remove'>".$brand."</h3>";
 				   	echo "<p class='uk-margin-remove uk-text-center uk-padding-remove'>".$model."</p>";
 				    echo "<p class='uk-text-center uk-padding-remove'>Total: P".$subtotal."</p>";
+					echo "<input value='$subtotal' name='subtotal' class='total'>";
 				    echo "<span class='uk-margin-remove-top uk-text-center' name='quantity'>Quantity: ".$quantity."</span>";
 					echo "<input type='number' class='uk-input uk-text-center cartColor uk-padding-remove' name='change_quantity' min=1 value=1>";
 					echo "<button id='delete' type='submit' class='uk-button uk-button-secondary uk-text-center'>Quantity</button>";
-					echo "<a href='deletecart.php?index=$index'><button type='button' class='uk-button uk-button-secondary'>Remove</button></a></div>";	
-					
-				}
+					echo "<a href='deletecart.php?index=$index'><button type='button' class='uk-button uk-button-secondary'>Remove</button></a></div>";						
 			}	
+				}
 
 			echo "<div class='uk-card-default uk-padding-small uk-margin-top cartColor'>";
-			echo "<h2 class='cartColor uk-text-center'>TOTAL: Php ".$total."</h2>";
+			echo "<h2 class='uk-text-center heroBlack'>Total: Php".$total."<h2>";
 			echo "<span><button type ='submit' class='uk-button uk-button-secondary uk-text-center'>Check Out</button><span></form>";
 
 
@@ -166,7 +166,7 @@ function display_content(){
 		echo "</div></div></div>";
 
 		// Items 
-		echo "<div id='filter'>";
+		echo "<div id='filter'>"; // FILTER AJAX
 		$sql = "SELECT * FROM shops";
 		$result = mysqli_query($conn,$sql);
 		echo '<div class="uk-section uk-section-default uk-padding-remove-top uk-padding-large">

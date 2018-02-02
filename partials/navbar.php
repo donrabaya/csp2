@@ -42,6 +42,7 @@ if (isset($_SESSION['username'])) {
 	            			echo "<li class='uk-active'><a href='logout.php'><button class='uk-button uk-button-default tm-button-default heroWhite uk-border-rounded'>LOGOUT</button></a></li>";
 	            		} else if (isset($_SESSION['username'])) {
 	            			echo "<li><a href='#' class='heroWhite'>Hi, ".$username.".</a></li>";
+	            			echo "<li><a href='userprofile.php' class='heroWhite'>Profile</a></li>";
 	            			echo "<li class='uk-active'><a href='logout.php'><button class='uk-button uk-button-default tm-button-default heroWhite uk-border-rounded'>LOGOUT</button></a></li>";
 	            		} else {
 	            			echo '<li class="uk-active"><a href="login.php"><button class="uk-button uk-button-default tm-button-default heroWhite uk-border-rounded">LOGIN</button></a></li>';

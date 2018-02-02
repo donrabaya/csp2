@@ -23,7 +23,7 @@
 		echo "</select>";
 		echo "<br><br>";
 		echo "<input type='button' class='uk-button uk-button-default uk-modal-close uk-margin-right' value='Cancel'>";
-		echo "<input type='submit' class='uk-button uk-button-primary' value='Add Item'></div>";
+		echo "<input type='button' class='uk-button uk-button-primary' value='Add Item'></div>";
 		echo "</form></div></div>";
 	}
 
