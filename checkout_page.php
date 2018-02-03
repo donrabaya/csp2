@@ -20,9 +20,9 @@ function display_content(){
     			<div class="uk-container">';
 
     			echo '<div class="uk-panel uk-light uk-margin-medium">';
-				echo "<h2 class='cartColor uk-text-center'>".$username."'s Items</h2>";
+				echo "<h1 class='heroWhite uk-text-center'>".$username."'s ITEMS</h1>";
 				echo '</div>
-				 <div class="uk-child-width-1-3@m uk-text-left" uk-grid>
+				 <div class="uk-child-width-1-3@m uk-text-left uk-margin-large-top" uk-grid>
 			            ';
 			}
 
@@ -38,7 +38,7 @@ function display_content(){
 					$subtotal = $row['price'] * $quantity;
 					$total = $total + $subtotal;
 
-					echo "<div><div class='uk-card uk-card-default uk-card-body uk-width-1-1'>";
+					echo "<div><div class='uk-card uk-card-default uk-card-body uk-width-1-1 uk-border-rounded'>";
 
 					echo "<form class='container' method='POST' action='changequantity.php?index=$index'>";
 					echo "<img src='$image'>";
@@ -51,25 +51,25 @@ function display_content(){
 							<div>'.$model.'</div>
 						</div>';
 					echo '<div class="uk-grid-small" uk-grid>
-							<div class="uk-width-expand" uk-leader>Subtotal:</div>
+							<div class="uk-width-expand" uk-leader>QUANTITY:</div>
+							<div>'.$quantity.'</div>
+						</div>';
+					echo '<div class="uk-grid-small" uk-grid>
+							<div class="uk-width-expand" uk-leader>SUBTOTAL:</div>
 							<div>PHP'.$subtotal.'</div>
 						</div>';
 					echo "<input value='$subtotal' name='subtotal' class='total'><br>";
-					echo "<a href='deletecheckout.php?index=$index'><button type='button' class='uk-button uk-button-danger uk-align-center'>Remove</button></a>";
+					echo "<a href='deletecheckout.php?index=$index'><button type='button' class='uk-button uk-button-danger uk-align-center uk-border-rounded'>Remove</button></a>";
 					echo "</form>";						
 			echo "</div></div>";
 			}	
 				}
 			echo "</div>";
 
-			echo '<div class="uk-container uk-text-center">';
-			echo "<div class='uk-card-default uk-padding-small uk-margin-top cartColor uk-width-1-3 uk-align-center'>";
-			echo "<h2 class='uk-text-center heroBlack'>Total: Php".$total."<h2>";
-			echo "<span><a href='checkout.php'><button type ='button' class='uk-button uk-button-primary uk-text-center'>Purchase</button></a><span></div></div>";
-
-
-
-
+			echo '<div class="uk-container uk-text-center uk-margin-xlarge-top">';
+			echo "<div class='uk-card-default uk-padding-small uk-margin-top cartColor uk-width-1-3 uk-align-center uk-border-rounded'>";
+			echo "<h2 class='uk-text-center heroBlack'>TOTAL: Php".$total."<h2>";
+			echo "<span><a href='checkout.php'><button type ='button' class='uk-button uk-button-primary uk-text-center uk-border-rounded thiscolor'>Purchase</button></a><span></div></div>";
 
 			echo "</div></div>";
 

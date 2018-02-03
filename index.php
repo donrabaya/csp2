@@ -39,7 +39,20 @@
             	<h5 class="heroWhite arrow-down"></h5>
            </div>
     	</div>
-
+    	
+<div class="pulse-container">
+  <div class="pulse-box">
+    <svg class="pulse-svg" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <circle class="circle first-circle" fill="#FF6347" cx="25" cy="25" r="25"></circle>
+      <circle class="circle second-circle" fill="#FF6347" cx="25" cy="25" r="25"></circle>
+      <circle class="circle third-circle" fill="#FF6347" cx="25" cy="25" r="25"></circle>
+      <circle class="circle" fill="#FF6347" cx="25" cy="25" r="25"></circle>
+    </svg>
+  </div>
+  <div class="pulse-box">
+    <div class="pulse-css"></div>
+  </div>
+</div>
     	<!-- Desktop Nav -->
     	<div class="uk-position-top uk-visible@m">
 	    	<nav class="uk-navbar-container uk-navbar uk-navbar-transparent" uk-navbar>

@@ -30,12 +30,12 @@ function display_content(){
     			<div class="uk-container uk-text-center">
 
 			        <div class="uk-panel uk-light uk-margin-medium">
-			            <h3>Edit Profile</h3>
+			            <h1>Edit Profile</h1>
 			        </div>
 
 			        <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
 			            <div>
-			                <div class="uk-card uk-card-default uk-card-body uk-width-1-2 uk-align-center">';
+			                <div class="uk-card uk-card-default uk-card-body uk-width-1-2 uk-align-center uk-border-rounded">';
 
 			                echo "<form action='edituser_endpoint.php?index=$id' method='POST'>";
 
@@ -53,8 +53,8 @@ function display_content(){
 			                    </div>
 			                	<div class='uk-margin'>";
 
-			                echo "<a href='userprofile.php'><input type='button' class='uk-button uk-button-primary uk-margin-right' value='BACK'></a>";
-			                echo "<input type='submit' class='uk-button uk-button-primary' value='SAVE'></div></form>";
+			                echo "<a href='userprofile.php'><input type='button' class='uk-button uk-button-default uk-margin-right uk-border-rounded thiscolor heroWhite' value='BACK'></a>";
+			                echo "<input type='submit' class='uk-button uk-button-primary uk-border-rounded thiscolor' value='SAVE'></div></form>";
 
 			                echo '</div>
 			                </div>

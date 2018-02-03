@@ -10,7 +10,7 @@ echo '<div class="uk-position-relative">
     	  		<br><br>
     			<h1 class="heroWhite">A collection of popular brands just for you.</h1>
             	<div class="heroWhite"><h2 class="heroWhite">Welcome please take the
-            		<span style="color: yellow;">lead.</span>
+            		<span style="color: yellow;" class="bold">lead.</span>
 				</h2>
 				</div>
             	<h5 class="heroWhite">Browse the shelf.</h5><br><br><br>
@@ -108,13 +108,14 @@ function display_content(){
 	    // Add items(ADMIN) and Cart(USER)
 
 	    if (isset($_SESSION['username']) && $_SESSION['type_id'] == '2') {
-			echo "<button class='uk-button uk-button-default uk-align-left' id='add_item' href='#modal-sections' uk-toggle >ADD ITEM</button>";
+			echo "<button class='uk-button uk-button-primary uk-align-left uk-border-rounded thiscolor' id='add_item' href='#modal-sections' uk-toggle>ADD ITEM</button>";
 
 		} else if (isset($_SESSION['username'])) {
 
 		// Cart Button
 
-			echo "<button class='uk-button uk-button-default uk-align-left' uk-toggle='target: #offcanvas-flip'>CART</button>";	
+			echo "<button class='uk-button uk-button-primary uk-align-left uk-border-rounded thiscolor' uk-toggle='target: #offcanvas-flip'>CART</button>";
+			// echo "<a href='checkout_page.php'><button class='uk-button uk-button-primary uk-align-left uk-border-rounded'>ORDERS</button></a>";	
 			echo "<div id='offcanvas-flip' class='cartColor' uk-offcanvas='flip: true; overlay: true'>";
 			echo "<div class='uk-offcanvas-bar'>";
 
@@ -139,24 +140,24 @@ function display_content(){
 					$subtotal = $row['price'] * $quantity;
 					$total = $total + $subtotal;
 
-					echo "<div class='uk-card uk-card-default uk-card-body uk-margin cartColor uk-text-center' enctype='multipart/form-data'>";
+					echo "<div class='uk-card uk-card-default uk-card-body uk-margin cartColor uk-text-center uk-border-rounded' enctype='multipart/form-data'>";
 					echo "<form class='container' method='POST' action='changequantity.php?index=$index'>";
 					echo "<img src='$image'>";
     				echo "<h3 class='uk-card-title uk-text-center uk-padding-remove'>".$brand."</h3>";
 				   	echo "<p class='uk-margin-remove uk-text-center uk-padding-remove'>".$model."</p>";
-				    echo "<p class='uk-text-center uk-padding-remove'>Total: P".$subtotal."</p>";
+				    echo "<p class='uk-text-center uk-padding-remove'>Total: Php".$subtotal."</p>";
 					echo "<input value='$subtotal' name='subtotal' class='total'>";
 				    echo "<span class='uk-margin-remove-top uk-text-center' name='quantity'>Quantity: ".$quantity."</span>";
 					echo "<input type='number' class='uk-input uk-text-center cartColor uk-padding-remove' name='change_quantity' min=1 value=1>";
-					echo "<button id='delete' type='submit' class='uk-button uk-button-secondary uk-text-center'>Quantity</button>";
-					echo "<a href='deletecart.php?index=$index'><button type='button' class='uk-button uk-button-secondary'>Remove</button></a></div>";
+					echo "<button id='delete' type='submit' class='uk-button uk-button-secondary uk-text-center uk-border-rounded'>Quantity</button>";
+					echo "<a href='deletecart.php?index=$index'><button type='button' class='uk-button uk-button-danger uk-border-rounded'>Remove</button></a></div>";
 					echo "</form>";						
 			}	
 				}
 
-			echo "<div class='uk-card-default uk-padding-small uk-margin-top cartColor'>";
-			echo "<h2 class='uk-text-center heroBlack'>Total: Php".$total."<h2>";
-			echo "<span><a href='checkout_page.php'><button type ='button' class='uk-button uk-button-secondary uk-text-center'>Check Out</button></a><span></form>";
+			echo "<div class='uk-card-default uk-padding-small uk-margin-top cartColor uk-border-rounded'>";
+			echo "<h2 class='uk-text-center heroBlack'>TOTAL: Php".$total."<h2>";
+			echo "<span><a href='checkout_page.php'><button type ='button' class='uk-button uk-button-primary uk-align-center uk-border-rounded heroWhite thiscolor'>Check Out</button></a><span></form>";
 
 
 			echo "</div>";
@@ -171,7 +172,7 @@ function display_content(){
 		echo "<div id='filter'>"; // FILTER AJAX
 		$sql = "SELECT * FROM shops";
 		$result = mysqli_query($conn,$sql);
-		echo '<div class="uk-section uk-section-default uk-padding-remove-top uk-padding-large">
+		echo '<div class="uk-section uk-section-default uk-padding-small">
 			<div class="uk-container uk-margin-remove-top">
 				<div class="uk-child-width-1-3@m uk-grid-small uk-grid-match uk-text-center" uk-grid>';
 
@@ -180,19 +181,22 @@ function display_content(){
 
 			if ($filter == 'ALL' || $item['category_id'] == $filter) {
 				echo '<div>
-						<div class="uk-card uk-card-default uk-card-body">
+						<div class="uk-card uk-card-default uk-card-body uk-border-rounded">
 						<img src="'.$item['image'].'"width="80" height="80">
 				            <h3 class="uk-card-title">'.$item['brand'].'</h3>
 				            <p class="uk-margin-remove">'.$item['model'].'</p>
-				            <p class="uk-margin-remove-top">P'.$item['price'].'</p>';
+				            <p class="uk-margin-remove-top">Php'.$item['price'].'</p>';
 
 				if(isset($_SESSION['username']) && $_SESSION['type_id'] == '2'){
-					echo "<button class='uk-button uk-button-default render_modal_edit' href='#modal-sections' uk-toggle data-index='$index'>EDIT</button>";
-					echo "<button class='uk-button uk-button-default uk-margin-small-left delete_modal_body' href='#modal-sections' uk-toggle data-index='$index'>DELETE</button>";
+					echo "<button id='displayNone' class='uk-button uk-button-secondary render_modal_edit uk-border-rounded' href='#modal-sections' uk-toggle data-index='$index'>EDIT</button>";
+					echo "<button id='displayNone' class='uk-button uk-button-danger uk-margin-small-left delete_modal_body uk-border-rounded'  href='#modal-sections' uk-toggle data-index='$index'>DELETE</button>";
+
+					echo "<button id='displayBlock' class='uk-button uk-button-secondary render_modal_edit uk-border-rounded uk-width-1-1 displayNo' href='#modal-sections' uk-toggle data-index='$index'>EDIT</button>";
+					echo "<button id='displayBlock' class='uk-button uk-button-danger delete_modal_body uk-border-rounded uk-width-1-1 displayNo'  href='#modal-sections' uk-toggle data-index='$index'>DELETE</button>";
 
 				} else if(isset($_SESSION['username'])) {
 					echo "<form method='POST' action='add_to_cart.php?index=$index'>";
-					echo "<button class='uk-button uk-button-default render_modal_cart' href='#modal-sections' uk-toggle data-index='$index'>PURCHASE</button>";
+					echo "<button class='uk-button uk-button-default render_modal_cart uk-border-rounded' href='#modal-sections' uk-toggle data-index='$index'>PURCHASE</button>";
 					echo "</form>";
 				}	
 
@@ -206,7 +210,7 @@ function display_content(){
 		// Universal Modal
 		echo '<div id="modal-sections" uk-modal>
 				<div class="uk-modal-dialog" id="modal-body1">
-					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<button class="uk-modal-close-default uk-border-rounded" type="button" uk-close></button>
    						<div class="uk-modal-header">
         					<h2 class="uk-modal-title uk-text-center"><a class="uk-logo"><img src="assets/images/gravblack.svg" class="moonModal uk-text-center"></a></h2>
    						</div>

@@ -19,15 +19,15 @@ $sql = "SELECT * FROM shops";
 
 			if ($filter == 'ALL' || $item['category_id'] == $filter) {
 				echo '<div>
-						<div class="uk-card uk-card-default uk-card-body">
+						<div class="uk-card uk-card-default uk-card-body uk-border-rounded">
 						<img src="'.$item['image'].'"width="80" height="80">
 				            <h3 class="uk-card-title">'.$item['brand'].'</h3>
 				            <p class="uk-margin-remove">'.$item['model'].'</p>
-				            <p class="uk-margin-remove-top">P'.$item['price'].'</p>';
+				            <p class="uk-margin-remove-top">Php'.$item['price'].'</p>';
 
 				if(isset($_SESSION['username']) && $_SESSION['type_id'] == '2'){
-					echo "<button class='uk-button uk-button-default render_modal_edit' href='#modal-sections' uk-toggle data-index='$index'>EDIT</button>";
-					echo "<button class='uk-button uk-button-default uk-margin-small-left delete_modal_body' href='#modal-sections' uk-toggle data-index='$index'>DELETE</button>";
+					echo "<button class='uk-button uk-button-secondary render_modal_edit' href='#modal-sections' uk-toggle data-index='$index'>EDIT</button>";
+					echo "<button class='uk-button uk-button-danger uk-margin-small-left delete_modal_body' href='#modal-sections' uk-toggle data-index='$index'>DELETE</button>";
 
 				} else if(isset($_SESSION['username'])) {
 					echo "<form method='POST' action='add_to_cart.php?index=$index'>";

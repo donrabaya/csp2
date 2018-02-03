@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 03, 2018 at 08:23 AM
+-- Generation Time: Feb 03, 2018 at 06:21 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -46,7 +46,8 @@ CREATE TABLE `accounts` (
 INSERT INTO `accounts` (`id`, `name`, `username`, `email`, `password`, `type_id`, `last_name`, `address`) VALUES
 (3, 'Fedricco', 'Admin', 'fedriccorabaya@gmail.com', 'c464af817287343305cbd6493c593885695df531', 2, 'Rabaya', 'QC'),
 (18, 'Fedricco', 'donrabaya', 'fedriccorabaya@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Rabaya', 'QC'),
-(19, 'John', 'Doe', 'jd@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Doe', 'QC');
+(19, 'John', 'Doe', 'jd@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Doe', 'QC'),
+(20, 'Black', 'BM', 'BM@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Market', 'QC');
 
 -- --------------------------------------------------------
 
@@ -82,18 +83,6 @@ CREATE TABLE `orders` (
   `subtotal` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`id`, `quantity`, `shop_id`, `user_order_id`, `subtotal`) VALUES
-(273, 5, 1, 170, 185000),
-(274, 4, 5, 170, 220000),
-(275, 1, 10, 170, 22000),
-(276, 3, 1, 171, 111000),
-(277, 4, 4, 171, 74000),
-(278, 1, 1, 172, 37000);
-
 -- --------------------------------------------------------
 
 --
@@ -114,24 +103,24 @@ CREATE TABLE `shops` (
 --
 
 INSERT INTO `shops` (`id`, `image`, `brand`, `model`, `price`, `category_id`) VALUES
-(1, 'assets/images/smart1.jpg', 'Garmin', 'Fenix 5S Carrara White', 37000, 1),
-(2, 'assets/images/luxury1.jpg', 'Omega', 'Seamaster Planet Ocean', 85000, 2),
-(3, 'assets/images/casual1.jpg', 'Tissot', 'PRS 516 Chrongraph', 9500, 3),
+(1, 'assets/images/smart4.jpg', 'Nike', 'Nike GPS 42mm', 19000, 1),
+(2, 'assets/images/luxury5.jpg', 'Breitling', 'Chronomat GMT', 50000, 2),
+(3, 'assets/images/casual6.jpg', 'Luminox', 'SET Scott Cassel', 6000, 3),
 (4, 'assets/images/smart2.jpg', 'Fitbit', 'Ionic', 18500, 1),
 (5, 'assets/images/luxury2.jpg', 'Hublot', 'Classic Fusion 38mm', 55000, 2),
-(9, 'assets/images/casual2.jpg', 'Luminox', 'Recon Pointman 8820 ', 9000, 3),
-(10, 'assets/images/smart4.jpg', 'Apple', 'Nke GPS 42mm', 22000, 1),
+(9, 'assets/images/casual4.jpg', 'Nixon', 'Sentry Browned Out', 6500, 3),
+(10, 'assets/images/smart1.jpg', 'Garmin', 'Fenix 5S Carrara White', 37000, 1),
 (11, 'assets/images/luxury4.jpg', 'Breitling', 'Superocean III', 75000, 2),
-(12, 'assets/images/casual4.jpg', 'Nixon', 'Sentry Browned Out', 6000, 3),
+(12, 'assets/images/casual1.jpg', 'Tissot', 'PRS 516 Chrongraph', 5000, 3),
 (13, 'assets/images/smart3.jpg', 'Suunto', 'Spartan Ultra Black HT', 31000, 1),
 (14, 'assets/images/luxury3.jpg', 'Rolex', 'Submariner Steel Gold', 80000, 2),
 (15, 'assets/images/casual3.jpg', 'Seiko', 'Sky Solar', 7000, 3),
 (16, 'assets/images/smart5.jpg', 'Nixon', 'GPL Mission', 25000, 1),
-(17, 'assets/images/luxury5.jpg', 'Breitling', 'Chronomat GMT', 69000, 2),
+(17, 'assets/images/luxury1.jpg', 'Omega', 'Seamaster Planet Ocean', 55000, 2),
 (18, 'assets/images/casual5.jpg', 'Nixon', 'Sentry Classic 52', 7000, 3),
 (19, 'assets/images/smart6.jpg', 'Moto', '360 Sport 55mm', 5000, 1),
 (20, 'assets/images/luxury6.jpg', 'Rolex', 'GMT Master', 90000, 2),
-(21, 'assets/images/casual6.jpg', 'Luminox', 'SET Scott Cassel', 9000, 3);
+(21, 'assets/images/casual2.jpg', 'Luminox', 'Recon Pointman 8820 ', 9000, 3);
 
 -- --------------------------------------------------------
 
@@ -162,15 +151,6 @@ CREATE TABLE `user_orders` (
   `id` int(11) NOT NULL,
   `account_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user_orders`
---
-
-INSERT INTO `user_orders` (`id`, `account_id`) VALUES
-(170, 19),
-(171, 19),
-(172, 19);
 
 --
 -- Indexes for dumped tables
@@ -225,7 +205,7 @@ ALTER TABLE `user_orders`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -237,7 +217,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=279;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=280;
 
 --
 -- AUTO_INCREMENT for table `shops`
@@ -255,7 +235,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT for table `user_orders`
 --
 ALTER TABLE `user_orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=174;
 
 --
 -- Constraints for dumped tables

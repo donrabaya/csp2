@@ -1,5 +1,5 @@
 <!-- Footer -->
-    <div class="uk-section uk-section-secondary uk-light uk-padding-remove-top">
+    <div id="team" class="uk-section uk-section-secondary uk-light uk-padding-remove-top thiscolor">
     	<div class="uk-container">
     		<div uk-grid>
     			<div class="uk-width-expand@m uk-text-center uk-padding-remove">
@@ -12,7 +12,7 @@
 	    			<p>Disclaimer: No copyright infringement is intended. This is only for educational purposes and not for profit. Some assets used are not owned by the developers unless otherwise stated; the credit goes to the owner.</p>
     			</div>
     			<div class="uk-width-expand@m uk-width-1-2@s  uk-first-column uk-text-center uk-text-left@l">
-   	    			<h3>Products</h3>
+   	    			<h3>BRANDS</h3>
 	    			<ul class="uk-list">
 	    				<li>
 	    					<a href="#">Seiko</a>
@@ -32,7 +32,7 @@
 	    			</ul>
     			</div>
     			<div class="uk-width-expand@m uk-width-1-2@s uk-first-column uk-text-center uk-text-right@l">
-   	    			<h3>Company</h3>
+   	    			<h3>COMPANY</h3>
 	    			<ul class="uk-list">
 	    				<li>
 	    					<a href="#">The Team</a>
@@ -46,7 +46,7 @@
 	    			</ul>
     			</div>
     			<div class="uk-width-expand@m uk-width-1-2@s uk-first-column uk-text-center uk-text-right@l">
-   	    			<h3>Contact Us</h3>
+   	    			<h3>CONTACT US</h3>
 	    			<p>fedriccorabaya@gmail.com</p>
 	    			<a href="" uk-icon="icon: soundcloud"></a>
 	    			<a href="" uk-icon="icon: github"></a>

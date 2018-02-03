@@ -11,7 +11,7 @@ echo '<div class="uk-position-relative">
     	  		<br class="displayNone"><br class="displayNone">
     			<h1 class="heroWhite">The most trusted online watch shop in the web</h1>
             	<div class="heroWhite"><h2 class="heroWhite">High-end products to help you set the
-  					<span style="color: yellow;">trend.</span>
+  					<span style="color: yellow;" class="bold">trend.</span>
 				</h2>
 				</div>
 				<br class="displayNone"><br class="displayNone">
@@ -98,7 +98,7 @@ function display_content(){
     			</div>
     			<div class="uk-width-expand@m uk-float-left">
    					<div class="uk-panel" uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
-    					<h3 class="uk-text-center setPink">Lead The Team</h3>
+    					<h3 class="uk-text-center setPink2">Lead The Team</h3>
     					<p>Bring your A game and feel the power towards your peers, a collection of affordable luxury watches are up for grabs.</p>
     				</div>
     			</div>
@@ -117,7 +117,7 @@ function display_content(){
     			</div>
     			<div class="uk-width-expand@m">
     				<div class="uk-panel" uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
-    					<h3 class="uk-text-center setPink">Style It Out</h3>
+    					<h3 class="uk-text-center setPink2">Style It Out</h3>
     					<p>Street fashion, Sunday vibe, impromptu parties? We got you covered with our wide array of casual watches.</p>
     				</div>
     			</div>
@@ -136,7 +136,7 @@ function display_content(){
     				</div>
     			<div class="uk-width-expand@m">
     				<div class="uk-panel" uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
-    					<h3 class="uk-text-center setPink">Travel Companion</h3>
+    					<h3 class="uk-text-center setPink2">Travel Companion</h3>
     					<p>What better way to explore different time zones with a mind on your wrist, dive into our vault of smart watches and see the magic before your own eyes.</p>
     				</div>
     			</div>
@@ -229,10 +229,10 @@ function display_content(){
     </div> 	<!-- end of section 4 -->
 
     <!-- SECTION 5 -->
-    <div id="team" class="uk-section uk-section-default">
+    <div class="uk-section uk-section-default">
     	<div class="uk-container">
     		<div class="uk-text-center">
-    			<h3>OUR TEAM</h3>
+    			<h3 class="setPink">OUR TEAM</h3>
     		</div>
     		<div class="uk-grid-small uk-child-width-expand@s uk-text-center uk-flex-middle" uk-grid uk-scrollspy="cls: uk-animation-slide-right; target: > div > .uk-card; delay: 200; repeat: true" uk-height-match="target: > div > .uk-card; row: false">
 			    <div>
@@ -258,14 +258,14 @@ function display_content(){
 			    </div>
 			    <div>
 			        <div class="uk-height-large uk-card uk-card-default uk-card-body uk-flex uk-flex-center uk-flex-middle senior">
-			        	<h3>Senior Team</h3>
+			        	<h3 class="heroWhite trans">Senior Team</h3>
 			        </div>
 			    </div>
 			</div>   
     		<div class="uk-grid-small uk-child-width-expand@s uk-text-center uk-flex-middle" uk-grid uk-scrollspy="cls: uk-animation-slide-left; target: > div > .uk-card; delay: 200; repeat: true" uk-height-match="target: > div > .uk-card; row: false">
 			    <div>
 			        <div class="junior uk-height-large uk-card uk-card-default uk-card-body uk-flex uk-flex-center uk-flex-middle">
-			        	<h3>Junior Team</h3>
+			        	<h3 class="heroWhite trans">Junior Team</h3>
 			        </div>
 			    </div>
 			    <div>

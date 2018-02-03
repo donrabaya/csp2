@@ -5,6 +5,29 @@
 	font-family: 'Lato', sans-serif !important;
 }
 /* MAIN CSS */
+.uk-navbar-container:not(.uk-navbar-transparent){
+	background: #1b3c4a !important;
+}
+.thiscolor {
+	background: #1b3c4a !important;
+}
+.imgSize {
+	width: 20vw;
+}
+.blue {
+	background-color: #1e87f0 !important;
+	color: white !important;
+}
+.badge {
+	width: 80px;
+}
+.webname {
+	font-size: 22px !important;
+	font-weight: bold !important;
+}
+.bold {
+	font-weight: bold !important;
+}
 .total {
 	display: none !important;
 }
@@ -31,7 +54,14 @@
 	font-weight: 5000;
 }
 .setPink {
-	color: #FF4870 !important;
+	color: #1b3c4a !important;
+	text-transform: uppercase !important;
+}
+.trans {
+	text-transform: uppercase !important;
+}
+.setPink2 {
+	color: #1b3c4a !important;
 }
 .moonFoot {
 	width: 3em;
@@ -61,10 +91,12 @@
 li {
 	list-style-type: none;
 }
-.form {
-	width: 80%;
+.displayNo {
+ 	display: none !important;
+ }
+#displayBlock1 {
+	display: none !important;
 }
-
 /*Animations*/
 
 /* Down Arrow */
@@ -131,9 +163,22 @@ li {
 
 /*MEDIA QUERY*/
 
+
 @media only screen and (max-width: 415px) {
  	.displayNone {
  		display: none;
+ 	}
+ 	.displayBlock {
+ 		display: block;
+ 	}
+ 	#displayNone {
+ 		display: none;
+ 	}
+ 	#displayBlock {
+ 		display: block !important;
+ 	}
+ 	.imgSize {
+ 		width: 80vw;
  	}
  	h1 {
  		font-size: 1em !important;
@@ -148,6 +193,15 @@ li {
 		width: 4em !important;
 	}
  }
+
+
+@media only screen and (max-width: 767px) {
+ 	.imgSize {
+ 		width: 80vw;
+ 	}
+ }
+
+
 
 
 

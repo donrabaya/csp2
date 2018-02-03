@@ -30,12 +30,12 @@ function display_content(){
     			<div class="uk-container">
 
 			        <div class="uk-panel uk-light uk-margin-medium uk-text-center">
-			            <h3>Your Profile</h3>
+			            <h1>Your Profile</h1>
 			        </div>
 
 			        <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
 			            <div>
-			                <div class="uk-card uk-card-default uk-card-body uk-width-1-2 uk-align-center">
+			                <div class="uk-card uk-card-default uk-card-body uk-width-1-2 uk-align-center uk-border-rounded">
 			                	<div class="uk-grid-small" uk-grid>
 									<div class="uk-width-expand" uk-leader>Username:</div>
 									<div>'.$user.'</div>
@@ -58,8 +58,8 @@ function display_content(){
 								</div>
 			                	<div class="uk-margin">';
 			                echo '<div class="uk-container uk-text-center">';	
-			                echo "<a href='edituser.php?index=$id'><button class='uk-button uk-button-primary uk-margin-right'>EDIT</button></a>";
-			                echo "<a href='deleteuser.php?index=$id'><button class='uk-button uk-button-danger'>DELETE</button></a>";
+			                echo "<a href='edituser.php?index=$id'><button class='uk-button uk-button-default uk-margin-right uk-border-rounded thiscolor heroWhite'>EDIT</button></a>";
+			                echo "<a href='deleteuser.php?index=$id'><button class='uk-button uk-button-danger uk-border-rounded'>DELETE</button></a>";
 			                echo '</div></div>
 
 			                </div>

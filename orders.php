@@ -13,8 +13,9 @@ require 'connection.php';
     			<div class="uk-container uk-text-center">
     				<div class="uk-container">
     					<div class="uk-panel uk-light uk-margin-medium">
-			            	<h3>Customer Orders</h3>
+			            	<h1>Customer Orders</h1>
 			        	</div>
+			        	<br>
 			        <div class="uk-child-width-1-3@m uk-text-left" uk-grid>
 			            ';
 
@@ -42,7 +43,7 @@ require 'connection.php';
 				extract($row2);
 
 
-			    echo    '<div><div class="uk-card uk-card-default uk-card-body uk-width-1-1">';
+			    echo    '<div><div class="uk-card uk-card-default uk-card-body uk-width-1-1 uk-border-rounded">';
 
 			                echo "<form action='edituser_endpoint.php?index=$id' method='POST'>";
 
@@ -65,8 +66,9 @@ require 'connection.php';
 								</div>
 			                	<div class="uk-margin">';
 
-			                echo "<input type='submit' class='uk-button uk-button-primary uk-margin-right' value='PROCESS' disabled>
-			                <a href='deleteorder.php?order=$order><button type='button' class='uk-button uk-button-danger' disabled>CANCEL</button></a>
+			                echo "<a href='home.php'><button type='button' class='uk-button uk-button-primary uk-align-center uk-border-rounded thiscolor'>PROCESS</button></a>
+
+			              
 			                </div></form>";
 			            
 			                echo '</div></div>';
@@ -81,6 +83,6 @@ require 'connection.php';
 			   </div>
 			</div>';
 }
-
+ // <a href='deleteorder.php?order=$order><button type='button' class='uk-button uk-button-danger' disabled>CANCEL</button></a>
 require "template.php";
 ?>

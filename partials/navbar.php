@@ -8,12 +8,13 @@ if (isset($_SESSION['username'])) {
 
 
 <div class="uk-position-top uk-visible@m">
-	    	<nav class="uk-navbar-container uk-navbar height uk-navbar-transparent" uk-navbar>
+	<div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 200">
+	    	<nav class="uk-navbar-container uk-navbar height uk-navbar-transparent uk-dark" uk-navbar>
 	    		<div class="uk-navbar-left">
         			<div class="uk-container">
         				<ul class="uk-navbar-nav uk-flex-middle">
             				<!-- <li><a class="uk-logo moon"><img src="assets/images/grav.sv"></a></li> -->
-            				<li class="heroWhite">TIME STATION</li>
+            				<li class="heroWhite webname">TIME STATION</li>
             			</ul>
         			</div>
             	</div>
@@ -22,14 +23,14 @@ if (isset($_SESSION['username'])) {
 	                    <li class="heroBlack"><a href="home.php" class="heroWhite bottom">HOME</a></li>
 	                    <li><a href="shop.php" class="heroWhite">SHOP</a>
 	                    </li>
-	                    <li>
-	                        <a href="#brand" class="heroWhite" uk-scroll>BRANDS</a>
+	                	<li>
+	                        <a href="#team" class="heroWhite" uk-scroll>BRANDS</a>
 	                    </li>
-	                    <li>
+	             <!--        <li>
 	                        <a href="#services" class="heroWhite" uk-scroll>SERVICES</a>
-	                    </li>
+	                    </li> -->
 	                    <li>
-	                        <a href="#team" class="heroWhite" uk-scroll>OUR TEAM</a>
+	                        <a href="#team" class="heroWhite" uk-scroll>ABOUT US</a>
 	                    </li>
 	                </ul>
 	            </div>
@@ -42,16 +43,17 @@ if (isset($_SESSION['username'])) {
 	            			echo "<li class='uk-active'><a href='logout.php'><button class='uk-button uk-button-default tm-button-default heroWhite uk-border-rounded'>LOGOUT</button></a></li>";
 	            		} else if (isset($_SESSION['username'])) {
 	            			echo "<li><a href='#' class='heroWhite'>Hi, ".$username.".</a></li>";
-	            			echo "<li><a href='userprofile.php' class='heroWhite'>Profile</a></li>";
+	            			echo "<li><a href='userprofile.php'><button class='uk-button uk-button-default tm-button-default heroWhite uk-border-rounded'>Profile</button></a></li>";
 	            			echo "<li class='uk-active'><a href='logout.php'><button class='uk-button uk-button-default tm-button-default heroWhite uk-border-rounded'>LOGOUT</button></a></li>";
 	            		} else {
 	            			echo '<li class="uk-active"><a href="login.php"><button class="uk-button uk-button-default tm-button-default heroWhite uk-border-rounded">LOGIN</button></a></li>';
-	            			echo '<li class="uk-active"><a href="register.php"><button class="uk-button uk-button-default tm-button-default heroWhite uk-border-rounded">REGISTER</button></a></li>';
+	            			echo '<li class="uk-active"><a href="register.php"><button class="uk-button uk-button-default tm-button-default heroWhite uk-border-rounded">SIGNUP</button></a></li>';
 	            		}
 	            		?>
 	            	</ul>
 	            </div>
 	        </nav>
+	    </div>
 	     </div>
 
     	<!-- Mobile Nav -->
@@ -77,6 +79,7 @@ if (isset($_SESSION['username'])) {
 			            	<?php 
 			            	if (isset($_SESSION['username'])) {
 			            		echo "<li><a href='#' class='heroBlack'>Hi, ".$username.".</a></li>";
+			            		echo "<li><a href='orders.php' class='heroBlack'>Orders</a></li>";
 			            	} else {
 
 			            	}
