@@ -7,8 +7,10 @@ function display_title(){
 function display_content(){
 require 'connection.php';
 
-		echo '<div class="uk-section uk-section-large profile">
-				<div class="uk-section uk-section-default uk-preserve-color uk-text-center">
+		echo '
+				<div class="uk-section uk-section-large profile">
+			
+    			<div class="uk-container uk-text-center">
     				<div class="uk-container">
     					<div class="uk-panel uk-light uk-margin-medium">
 			            	<h3>Customer Orders</h3>
@@ -44,17 +46,23 @@ require 'connection.php';
 
 			                echo "<form action='edituser_endpoint.php?index=$id' method='POST'>";
 
-			                echo '<div class="uk-margin">
-			                    	<p>BUYER: '.$user.'</p>
-			                    </div>
-			                	<div class="uk-margin">
-			                		<p>ITEM: '.$brand.' '.$model.'</p>			               
-			                    	<p>PRICE: '.$price.'</p>
-			                    </div>
-			                	<div class="uk-margin">
-			                    	<p>PIECES: '.$quantity.'</p>
-			                    </div>
-			      
+			                echo '
+		                		<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>BUYER:</div>
+									<div>'.$user.'</div>
+								</div>
+		                		<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>ITEM:</div>
+									<div>'.$brand.' '.$model.'</div>
+								</div>
+		                		<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>PIECES:</div>
+									<div>'.$quantity.'</div>
+								</div>
+		                		<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>TOTAL:</div>
+									<div>PHP'.$subtotal.'</div>
+								</div>
 			                	<div class="uk-margin">';
 
 			                echo "<input type='submit' class='uk-button uk-button-primary uk-margin-right' value='PROCESS' disabled>

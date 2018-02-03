@@ -37,7 +37,7 @@ foreach ($_SESSION['cart'] as $index => $quantity) {
 
 
 
-header('location: shop.php');
+header('location: Thanks.php');
 
 
 ?>

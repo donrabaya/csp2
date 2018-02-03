@@ -140,7 +140,7 @@ function display_content(){
 					$total = $total + $subtotal;
 
 					echo "<div class='uk-card uk-card-default uk-card-body uk-margin cartColor uk-text-center' enctype='multipart/form-data'>";
-					echo "<form class='container' method='POST' action='checkout.php?index=$index'>";
+					echo "<form class='container' method='POST' action='changequantity.php?index=$index'>";
 					echo "<img src='$image'>";
     				echo "<h3 class='uk-card-title uk-text-center uk-padding-remove'>".$brand."</h3>";
 				   	echo "<p class='uk-margin-remove uk-text-center uk-padding-remove'>".$model."</p>";
@@ -149,7 +149,6 @@ function display_content(){
 				    echo "<span class='uk-margin-remove-top uk-text-center' name='quantity'>Quantity: ".$quantity."</span>";
 					echo "<input type='number' class='uk-input uk-text-center cartColor uk-padding-remove' name='change_quantity' min=1 value=1>";
 					echo "<button id='delete' type='submit' class='uk-button uk-button-secondary uk-text-center'>Quantity</button>";
-					// echo "<a href='changequantity.php?index=$index'><button type='button' class='uk-button uk-button-primary'>QUANTITY</button></a>";	
 					echo "<a href='deletecart.php?index=$index'><button type='button' class='uk-button uk-button-secondary'>Remove</button></a></div>";
 					echo "</form>";						
 			}	
@@ -157,7 +156,7 @@ function display_content(){
 
 			echo "<div class='uk-card-default uk-padding-small uk-margin-top cartColor'>";
 			echo "<h2 class='uk-text-center heroBlack'>Total: Php".$total."<h2>";
-			echo "<span><a href='checkout.php'><button type ='button' class='uk-button uk-button-secondary uk-text-center'>Check Out</button></a><span></form>";
+			echo "<span><a href='checkout_page.php'><button type ='button' class='uk-button uk-button-secondary uk-text-center'>Check Out</button></a><span></form>";
 
 
 			echo "</div>";

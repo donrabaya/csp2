@@ -26,42 +26,48 @@ function display_content(){
 
 
 	echo '<div class="uk-section uk-section-large profile">
-			<div class="uk-section uk-section-primary uk-preserve-color uk-text-center">
+			
     			<div class="uk-container">
 
-			        <div class="uk-panel uk-light uk-margin-medium">
+			        <div class="uk-panel uk-light uk-margin-medium uk-text-center">
 			            <h3>Your Profile</h3>
 			        </div>
 
 			        <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
 			            <div>
 			                <div class="uk-card uk-card-default uk-card-body uk-width-1-2 uk-align-center">
-			                	<div class="uk-margin">
-			                    	<p>'.$user.'</p>
-			                    </div>
-			                	<div class="uk-margin">
-			                    	<p>'.$name.'</p>
-			                    </div>
-			                	<div class="uk-margin">
-			                    	<p>'.$lname.'</p>
-			                    </div>
-			                	<div class="uk-margin">
-			                    	<p>'.$address.'</p>
-			                    </div>
-			                	<div class="uk-margin">
-			                    	<p>'.$email.'</p>
-			                    </div>
-			                	<div class="uk-margin">';	
+			                	<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Username:</div>
+									<div>'.$user.'</div>
+								</div>
+			                	<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>First Name:</div>
+									<div>'.$name.'</div>
+								</div>
+			                	<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Last Name:</div>
+									<div>'.$lname.'</div>
+								</div>
+			                	<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Address:</div>
+									<div>'.$address.'</div>
+								</div>
+			                	<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Email:</div>
+									<div>'.$email.'</div>
+								</div>
+			                	<div class="uk-margin">';
+			                echo '<div class="uk-container uk-text-center">';	
 			                echo "<a href='edituser.php?index=$id'><button class='uk-button uk-button-primary uk-margin-right'>EDIT</button></a>";
-			                echo "<a href='deleteuser.php?index=$id'><button class='uk-button uk-button-primary'>DELETE</button></a>";
-			                echo '</div>
+			                echo "<a href='deleteuser.php?index=$id'><button class='uk-button uk-button-danger'>DELETE</button></a>";
+			                echo '</div></div>
 
 			                </div>
 			            </div>
 			        </div>
 
 		    	</div>
-			</div>
+	
 		</div>';
 	}
 

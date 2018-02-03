@@ -1,11 +1,25 @@
 <?php 
 
-echo '<div class"uk-section-large uk-section"><div class="uk-position-relative">
-		<div class="uk-inline">
-    	<img  class="imgHeight" src="assets/images/back2.jpg" alt="">
-    		<div class="uk-position-center uk-overlay uk-text-center">
-    		<h2 class="heroWhite">Hey, welcome to the station!</h2>
-    			<div class="uk-card-body uk-card-secondary uk-border-rounded uk-padding-medium uk-align-center form">
+
+function display_title(){
+	echo "Registration Page";
+}
+
+function display_content(){
+	echo '
+
+				<div class="uk-section uk-section-large profile">
+			
+    			<div class="uk-container uk-text-center">
+
+    			<div class="uk-panel uk-light uk-margin-medium">
+    			<h2 class="heroWhite">Hey, welcome to the station!</h2>
+    			</div>
+
+    			 <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
+			            <div>
+
+    			<div class="uk-card-body uk-card-secondary uk-border-rounded uk-padding-medium uk-align-center uk-width-1-2 form">
 							<form action="register_endpoint.php" method="POST">
 								<div class="uk-margin">
 							        <div class="uk-inline">
@@ -54,17 +68,12 @@ echo '<div class"uk-section-large uk-section"><div class="uk-position-relative">
 							    <button type="submit" name="submit" class="uk-button uk-button-default" id="continue" disabled>Register</button>
 							</form>
 						</div>
-		    		</div>
-    			 </div>
-    		</div>
-    		</div>';
+						</div>
+						</div>
 
-function display_title(){
-	echo "Registration Page";
-}
 
-function display_content(){
-	echo "";
+	</div>
+	</div>';
 }
 
 require "template.php"

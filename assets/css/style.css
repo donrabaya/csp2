@@ -9,7 +9,10 @@
 	display: none !important;
 }
 .profile {
-	background-color: black;
+	background-image: url("../images/back2.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .height {
 	height: 5vw !important;

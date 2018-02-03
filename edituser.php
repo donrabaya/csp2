@@ -26,11 +26,11 @@ function display_content(){
 
 
 	echo '<div class="uk-section uk-section-large profile">
-			<div class="uk-section uk-section-primary uk-preserve-color uk-text-center">
-    			<div class="uk-container">
+	
+    			<div class="uk-container uk-text-center">
 
 			        <div class="uk-panel uk-light uk-margin-medium">
-			            <h3>Your Profile</h3>
+			            <h3>Edit Profile</h3>
 			        </div>
 
 			        <div class="uk-grid-match uk-child-width-expand@m" uk-grid>
@@ -53,6 +53,7 @@ function display_content(){
 			                    </div>
 			                	<div class='uk-margin'>";
 
+			                echo "<a href='userprofile.php'><input type='button' class='uk-button uk-button-primary uk-margin-right' value='BACK'></a>";
 			                echo "<input type='submit' class='uk-button uk-button-primary' value='SAVE'></div></form>";
 
 			                echo '</div>
@@ -61,7 +62,7 @@ function display_content(){
 			        </div>
 
 		    	</div>
-			</div>
+		
 		</div>';
 	}
 

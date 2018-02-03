@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 03, 2018 at 08:23 AM
+-- Generation Time: Jan 31, 2018 at 12:57 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `watch`
+-- Database: `Time`
 --
 
 -- --------------------------------------------------------
@@ -34,19 +34,17 @@ CREATE TABLE `accounts` (
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `type_id` int(11) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `address` varchar(255) NOT NULL
+  `type_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `name`, `username`, `email`, `password`, `type_id`, `last_name`, `address`) VALUES
-(3, 'Fedricco', 'Admin', 'fedriccorabaya@gmail.com', 'c464af817287343305cbd6493c593885695df531', 2, 'Rabaya', 'QC'),
-(18, 'Fedricco', 'donrabaya', 'fedriccorabaya@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Rabaya', 'QC'),
-(19, 'John', 'Doe', 'jd@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Doe', 'QC');
+INSERT INTO `accounts` (`id`, `name`, `username`, `email`, `password`, `type_id`) VALUES
+(3, 'Fedricco', 'Admin', 'fedriccorabaya@gmail.com', 'c464af817287343305cbd6493c593885695df531', 2),
+(4, 'John Doe', 'Doe', 'Doe@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1),
+(5, 'Marcus', 'Smart', 'Celtics@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1);
 
 -- --------------------------------------------------------
 
@@ -76,23 +74,10 @@ INSERT INTO `categories` (`id`, `category`) VALUES
 
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
-  `quantity` int(11) DEFAULT NULL,
-  `shop_id` int(11) DEFAULT NULL,
-  `user_order_id` int(11) DEFAULT NULL,
-  `subtotal` int(11) NOT NULL
+  `quantity` int(11) NOT NULL,
+  `shop_id` int(11) NOT NULL,
+  `account_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`id`, `quantity`, `shop_id`, `user_order_id`, `subtotal`) VALUES
-(273, 5, 1, 170, 185000),
-(274, 4, 5, 170, 220000),
-(275, 1, 10, 170, 22000),
-(276, 3, 1, 171, 111000),
-(277, 4, 4, 171, 74000),
-(278, 1, 1, 172, 37000);
 
 -- --------------------------------------------------------
 
@@ -152,26 +137,6 @@ INSERT INTO `types` (`id`, `usertype`) VALUES
 (1, 'customer'),
 (2, 'admin');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `user_orders`
---
-
-CREATE TABLE `user_orders` (
-  `id` int(11) NOT NULL,
-  `account_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user_orders`
---
-
-INSERT INTO `user_orders` (`id`, `account_id`) VALUES
-(170, 19),
-(171, 19),
-(172, 19);
-
 --
 -- Indexes for dumped tables
 --
@@ -195,7 +160,7 @@ ALTER TABLE `categories`
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `shop_id` (`shop_id`),
-  ADD KEY `user_order_id` (`user_order_id`);
+  ADD KEY `account_id` (`account_id`);
 
 --
 -- Indexes for table `shops`
@@ -211,13 +176,6 @@ ALTER TABLE `types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user_orders`
---
-ALTER TABLE `user_orders`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `account_id` (`account_id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -225,7 +183,7 @@ ALTER TABLE `user_orders`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -237,7 +195,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=279;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `shops`
@@ -252,12 +210,6 @@ ALTER TABLE `types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `user_orders`
---
-ALTER TABLE `user_orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
-
---
 -- Constraints for dumped tables
 --
 
@@ -265,26 +217,20 @@ ALTER TABLE `user_orders`
 -- Constraints for table `accounts`
 --
 ALTER TABLE `accounts`
-  ADD CONSTRAINT `accounts_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `accounts_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`);
 
 --
 -- Constraints for table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`shop_id`) REFERENCES `shops` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user_order_id`) REFERENCES `user_orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`shop_id`) REFERENCES `shops` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `shops`
 --
 ALTER TABLE `shops`
   ADD CONSTRAINT `shops_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
-
---
--- Constraints for table `user_orders`
---
-ALTER TABLE `user_orders`
-  ADD CONSTRAINT `user_orders_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
