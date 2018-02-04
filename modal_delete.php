@@ -19,8 +19,8 @@ extract($row);
     echo "<p class='uk-margin-remove-top uk-text-center'>P".$price."</p></div>";
 	echo "<div class='uk-modal-footer uk-text-center'>";
 	echo "<div class='uk-margin-right'>Confirm item to be deleted</div><br>";
-	echo "<input type='button' class='uk-button uk-button-default uk-modal-close uk-margin-right uk-border-rounded uk-width-1-3@s' value='Cancel'>";
-	echo "<a href='delete.php?index=$index'><button class='uk-button uk-button-primary uk-border-rounded thiscolor uk-width-1-3@s'>DELETE</button></a></div>";
+	echo "<input type='button' class='uk-button uk-button-default uk-modal-close uk-margin-right uk-width-1-3@s' value='Cancel'>";
+	echo "<a href='delete.php?index=$index'><button class='uk-button uk-button-danger uk-width-1-3@s'>DELETE</button></a></div>";
 	echo "</div></div>";
 
 ?>

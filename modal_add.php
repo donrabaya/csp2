@@ -22,8 +22,8 @@
 		}
 		echo "</select>";
 		echo "<br><br>";
-		echo "<input type='button' class='uk-button uk-button-default uk-modal-close uk-margin-right uk-border-rounded uk-width-1-3@s' value='Cancel'>";
-		echo "<input type='button' class='uk-button uk-button-primary uk-border-rounded thiscolor uk-width-1-3@s' value='Add Item'></div>";
+		echo "<input type='button' class='uk-button uk-button-default uk-modal-close uk-margin-right uk-width-1-3@s' value='Cancel'>";
+		echo "<input type='button' class='uk-button uk-button-secondary uk-width-1-3@s' value='Add Item'></div>";
 		echo "</form></div></div>";
 	}
 

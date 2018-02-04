@@ -7,7 +7,7 @@ function display_title(){
 
 function display_content(){
 		echo '
-			<div class="uk-section uk-section-large profile">
+			<div class="uk-section uk-section-large profile vh">
 			
     			<div class="uk-container uk-text-center">
 
@@ -27,17 +27,17 @@ function display_content(){
 							    <div class="uk-margin">
 							        <div class="uk-inline">
 							            <span class="uk-form-icon" uk-icon="icon: user"></span>
-							            <input class="uk-input uk-form-width-medium uk-border-rounded" type="text" name="username">
+							            <input class="uk-input uk-form-width-medium" type="text" name="username">
 							        </div>
 							    </div>
 							    <div class="uk-margin">
 							        <div class="uk-inline">
 							            <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-							            <input class="uk-input uk-form-width-medium uk-border-rounded" type="password" name="password">
+							            <input class="uk-input uk-form-width-medium" type="password" name="password">
 							        </div>
 							    </div>
 							    <br>
-							     <button class="uk-button uk-button-default uk-border-rounded" type="submit" name="submit">LOGIN</button>
+							     <button class="uk-button uk-button-default" type="submit" name="submit">LOGIN</button>
 							</form>
 						</div>
 

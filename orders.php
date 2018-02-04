@@ -8,7 +8,7 @@ function display_content(){
 require 'connection.php';
 
 		echo '
-				<div class="uk-section uk-section-large profile">
+				<div class="uk-section uk-section-large profile vh">
 			
     			<div class="uk-container uk-text-center">
     				<div class="uk-container">
@@ -66,7 +66,7 @@ require 'connection.php';
 								</div>
 			                	<div class="uk-margin">';
 
-			                echo "<a href='home.php'><button type='button' class='uk-button uk-button-primary uk-align-center uk-border-rounded thiscolor'>PROCESS</button></a>
+			                echo "<a href='home.php'><button type='button' class='uk-button uk-button-secondary uk-align-center'>PROCESS</button></a>
 
 			              
 			                </div></form>";

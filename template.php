@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
+	<link rel="icon" href="assets/images/download.jpg">
+
 	<title><?php display_title(); ?></title>
 
 	<!-- uikit CSS -->

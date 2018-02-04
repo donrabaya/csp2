@@ -72,9 +72,9 @@ if (isset($_SESSION['username'])) {
 			<div class="uk-offcanvas-content">
 			    <div id="offcanvas-nav" uk-offcanvas>
 			        <div class="uk-offcanvas-bar">
-			            <ul class="uk-nav uk-nav-default">
+			            <ul class="uk-nav uk-nav-default uk-text-center">
 			            	<div class="uk-text-center">
-			            		<li><a class="uk-logo"><img src="assets/images/gravblack.svg" class="moon1 uk-text-center"></a></li>
+			            		<li><a class="uk-logo"><img src="assets/images/gravblack.svg" class="moon1 uk-text-center uk-margin-bottom"></a></li>
 			            	</div>
 			            	<?php 
 			            	if (isset($_SESSION['username'])) {

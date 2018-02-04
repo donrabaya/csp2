@@ -6,14 +6,9 @@ function display_title(){
 
 function display_content(){ 
 		echo '
-			<div class="uk-section uk-section-large profile">
-             <br>
-             <br>
-             <br>
-             <br>
-             <br>
-			 <br>
-    			<div class="uk-container uk-text-center">
+			<div class="uk-section uk-section-large profile vh">
+
+    			<div class="uk-container uk-text-center uk-margin-xlarge-top">
 
 
     			<div class="uk-panel uk-light uk-margin-medium">
@@ -21,12 +16,7 @@ function display_content(){
     		<h4 class="heroWhite">Thank you very much for shopping with us, see you again soon!</h4>
     		</div>
 			            
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+    
 
     			</div>
     			 </div>';

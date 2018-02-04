@@ -17,10 +17,9 @@
 	echo "<div class='uk-margin'>";
     echo "<p class='uk-margin-remove-top uk-text-center'>P".$price."</p></div>";
 	echo "<input class='uk-input uk-text-center uk-form-width-medium uk-margin-bottom uk-border-rounded' type='number' name='quantity' min=1 value=1><br>";
-	echo "<input type='button' class='uk-button uk-button-default uk-modal-close uk-margin-right uk-border-rounded uk-width-1-3@s' value='Cancel'>";
-	echo "<button type='submit' class='uk-button uk-button-primary uk-border-rounded thiscolor uk-width-1-3@s'>ADD TO CART</button></div>";
+	echo "<input type='button' class='uk-button uk-button-default uk-modal-close uk-margin-right uk-width-1-3@s' value='Cancel'>";
+	echo '<button type="submit" class="uk-button uk-button-secondary uk-width-1-3@s" onclick="UIkit.notification({message: \'Notification message\'})">ADD TO CART</button></div>';
 	echo "</form></div>";
 
-	
-
 ?>
+

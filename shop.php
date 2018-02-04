@@ -108,14 +108,13 @@ function display_content(){
 	    // Add items(ADMIN) and Cart(USER)
 
 	    if (isset($_SESSION['username']) && $_SESSION['type_id'] == '2') {
-			echo "<button class='uk-button uk-button-primary uk-align-left uk-border-rounded thiscolor' id='add_item' href='#modal-sections' uk-toggle>ADD ITEM</button>";
+			echo "<button class='uk-button uk-button-secondary uk-align-left' id='add_item' href='#modal-sections' uk-toggle>ADD ITEM</button>";
 
 		} else if (isset($_SESSION['username'])) {
 
 		// Cart Button
 
-			echo "<button class='uk-button uk-button-primary uk-align-left uk-border-rounded thiscolor' uk-toggle='target: #offcanvas-flip'>CART</button>";
-			// echo "<a href='checkout_page.php'><button class='uk-button uk-button-primary uk-align-left uk-border-rounded'>ORDERS</button></a>";	
+			echo "<button class='uk-button uk-button-secondary uk-align-left' uk-toggle='target: #offcanvas-flip'>CART</button>";	
 			echo "<div id='offcanvas-flip' class='cartColor' uk-offcanvas='flip: true; overlay: true'>";
 			echo "<div class='uk-offcanvas-bar'>";
 
@@ -150,14 +149,14 @@ function display_content(){
 				    echo "<span class='uk-margin-remove-top uk-text-center' name='quantity'>Quantity: ".$quantity."</span>";
 					echo "<input type='number' class='uk-input uk-text-center cartColor uk-padding-remove' name='change_quantity' min=1 value=1>";
 					echo "<button id='delete' type='submit' class='uk-button uk-button-secondary uk-text-center uk-border-rounded'>Quantity</button>";
-					echo "<a href='deletecart.php?index=$index'><button type='button' class='uk-button uk-button-danger uk-border-rounded'>Remove</button></a></div>";
+					echo "<a href='deletecart.php?index=$index'><button type='button' class='uk-button uk-button-danger'>Remove</button></a></div>";
 					echo "</form>";						
 			}	
 				}
 
 			echo "<div class='uk-card-default uk-padding-small uk-margin-top cartColor uk-border-rounded'>";
 			echo "<h2 class='uk-text-center heroBlack'>TOTAL: Php".$total."<h2>";
-			echo "<span><a href='checkout_page.php'><button type ='button' class='uk-button uk-button-primary uk-align-center uk-border-rounded heroWhite thiscolor'>Check Out</button></a><span></form>";
+			echo "<span><a href='checkout_page.php'><button type ='button' class='uk-button uk-button-primary uk-align-center heroWhite thiscolor'>Check Out</button></a><span></form>";
 
 
 			echo "</div>";
@@ -188,15 +187,15 @@ function display_content(){
 				            <p class="uk-margin-remove-top">Php'.$item['price'].'</p>';
 
 				if(isset($_SESSION['username']) && $_SESSION['type_id'] == '2'){
-					echo "<button id='displayNone' class='uk-button uk-button-secondary render_modal_edit uk-border-rounded' href='#modal-sections' uk-toggle data-index='$index'>EDIT</button>";
-					echo "<button id='displayNone' class='uk-button uk-button-danger uk-margin-small-left delete_modal_body uk-border-rounded'  href='#modal-sections' uk-toggle data-index='$index'>DELETE</button>";
+					echo "<button id='displayNone' class='uk-button uk-button-secondary render_modal_edit ' href='#modal-sections' uk-toggle data-index='$index'>EDIT</button>";
+					echo "<button id='displayNone' class='uk-button uk-button-danger uk-margin-small-left delete_modal_body '  href='#modal-sections' uk-toggle data-index='$index'>DELETE</button>";
 
-					echo "<button id='displayBlock' class='uk-button uk-button-secondary render_modal_edit uk-border-rounded uk-width-1-1 displayNo' href='#modal-sections' uk-toggle data-index='$index'>EDIT</button>";
-					echo "<button id='displayBlock' class='uk-button uk-button-danger delete_modal_body uk-border-rounded uk-width-1-1 displayNo'  href='#modal-sections' uk-toggle data-index='$index'>DELETE</button>";
+					echo "<button id='displayBlock' class='uk-button uk-button-secondary render_modal_edit  uk-width-1-1 displayNo' href='#modal-sections' uk-toggle data-index='$index'>EDIT</button>";
+					echo "<button id='displayBlock' class='uk-button uk-button-danger delete_modal_body  uk-width-1-1 displayNo'  href='#modal-sections' uk-toggle data-index='$index'>DELETE</button>";
 
 				} else if(isset($_SESSION['username'])) {
 					echo "<form method='POST' action='add_to_cart.php?index=$index'>";
-					echo "<button class='uk-button uk-button-default render_modal_cart uk-border-rounded' href='#modal-sections' uk-toggle data-index='$index'>PURCHASE</button>";
+					echo "<button class='uk-button uk-button-default render_modal_cart' href='#modal-sections' uk-toggle data-index='$index'>PURCHASE</button>";
 					echo "</form>";
 				}	
 
@@ -313,9 +312,6 @@ require "template.php";
     }
 
 </script>
-
-
-
 
 
 

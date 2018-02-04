@@ -57,9 +57,10 @@ function display_content(){
 									<div>'.$email.'</div>
 								</div>
 			                	<div class="uk-margin">';
-			                echo '<div class="uk-container uk-text-center">';	
-			                echo "<a href='edituser.php?index=$id'><button class='uk-button uk-button-default uk-margin-right thiscolor heroWhite'>EDIT</button></a>";
-			                echo "<a href='deleteconfirm.php?index=$id'><button class='uk-button uk-button-danger'>DELETE</button></a>";
+			                echo '<div class="uk-container uk-text-center">';
+			                echo "<div><p>Confrim to delete profile</p></div>";	
+			                echo "<a href='userprofile.php?index=$id'><button class='uk-button uk-button-default uk-margin-right'>BACK</button></a>";
+			                echo "<a href='deleteuser.php?index=$id'><button class='uk-button uk-button-danger'>DELETE</button></a>";
 			                echo '</div></div>
 			                <br>
 
@@ -79,4 +80,3 @@ require "template.php";
 
 
 ?>
-

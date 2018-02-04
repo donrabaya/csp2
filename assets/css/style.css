@@ -5,8 +5,14 @@
 	font-family: 'Lato', sans-serif !important;
 }
 /* MAIN CSS */
+.cc {
+	width: 5em;
+}
+.vh {
+	height: 100vh;
+}
 .uk-navbar-container:not(.uk-navbar-transparent){
-	background: #1b3c4a !important;
+	background: #222 !important;
 }
 .thiscolor {
 	background: #1b3c4a !important;
@@ -54,7 +60,7 @@
 	font-weight: 5000;
 }
 .setPink {
-	color: #1b3c4a !important;
+	color: #F95462 !important;
 	text-transform: uppercase !important;
 }
 .trans {

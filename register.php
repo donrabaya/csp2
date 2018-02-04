@@ -24,64 +24,57 @@ function display_content(){
 							<form action="register_endpoint.php" method="POST" class="uk-grid-small" uk-grid>
 								 <div class="uk-width-1-2@s">
 								 	<div class="uk-inline">
-								 	 <span class="uk-form-icon" uk-icon=""></span>
-	       							<input class="uk-input uk-border-rounded" type="text" name="name" placeholder="First Name" required>
+								 	 
+	       							<input class="uk-input" type="text" name="name" placeholder="First Name" required>
 	       							</div>
 	    						</div>
 
 	    						<div class="uk-width-1-2@s">
 	    							<div class="uk-inline">
-	    							 <span class="uk-form-icon" uk-icon=""></span>
-	        						<input class="uk-input uk-border-rounded" type="text" name="lname" placeholder="Last Name" required>
+	    							 
+	        						<input class="uk-input" type="text" name="lname" placeholder="Last Name" required>
 	        						</div>
 	   							</div>
 
 
 							    <div class="uk-margin uk-width-1-2@s">
 							        <div class="uk-inline">
-							            <span class="uk-form-icon" uk-icon=""></span>
-							            <input class="uk-input uk-border-rounded" type="text" id="username" name="username" placeholder="Username" required>
+							            
+							            <input class="uk-input" type="text" id="username" name="username" placeholder="Username" required>
 							        </div>
 							    </div>
 
 								<div class="uk-margin uk-width-1-2@s">
 							        <div class="uk-inline">
-							            <span class="uk-form-icon" uk-icon=""></span>
-							            <input id="email1" class="uk-input uk-border-rounded" type="text" name="email" placeholder="Email" onblur="isValid();" required>
+							            
+							            <input id="email1" class="uk-input" type="text" name="email" placeholder="Email" onblur="isValid();" required>
 							        </div>
 							    </div>
 
-								<div class="uk-margin-remove-top uk-margin-remove-bottom uk-width-1-1@s displayNone">
+								<div class="uk-margin-remove-top uk-margin-remove-bottom uk-width-1-1@s">
 							        <div class="uk-inline">
 							            
-							            <input class="uk-input uk-width-large uk-text-center uk-padding-remove uk-border-rounded" type="text" name="address" placeholder="Address" required>
-							        </div>
-							    </div>
-
-								  <div id="displayBlock1" class="uk-margin uk-width-1-2@s displayBlock">
-							        <div class="uk-inline">
-							            <span class="uk-form-icon uk-form-icon-flip" uk-icon=""></span>
-							            <input class="uk-input uk-border-rounded" type="text" name="address" placeholder="Address" onblur="isValid();" required>
+							            <input class="uk-input uk-width-large uk-text-center uk-padding-remove" type="text" name="address" placeholder="Address">
 							        </div>
 							    </div>
 
 							    <div class="uk-margin uk-width-1-2@s">
 							        <div class="uk-inline">
-							            <span class="uk-form-icon uk-form-icon-flip" uk-icon=""></span>
-							            <input id="password1" class="uk-input uk-border-rounded" type="password" name="password" placeholder="Password" onblur="isValid();" required>
+							         
+							            <input id="password1" class="uk-input" type="password" name="password" placeholder="Password" onblur="isValid();" required>
 							        </div>
 							    </div>
 
 							    <div class="uk-margin uk-width-1-2@s">
 							        <div class="uk-inline">
-							            <span class="uk-form-icon uk-form-icon-flip" uk-icon=""></span>
-							            <input id="password2"class="uk-input uk-border-rounded" type="password" placeholder="Confirm Password" onkeyup="isValid();" required>
+							            <input id="password2"class="uk-input" type="password" placeholder="Confirm Password" onkeyup="isValid();" required>
 							        </div>
 							    </div>
 
 							    <div class="uk-margin uk-width-1-1@s">
 							         <div id="loginerror"></div>
-							          <button type="submit" name="submit" class="uk-button uk-button-default uk-border-rounded" id="continue" disabled>Register</button>							        
+							         <p id="username_error"></p>
+							          <button type="submit" name="submit" class="uk-button uk-button-default" id="continue">Register</button>							        
 							    </div>
 					
 							
@@ -98,4 +91,28 @@ function display_content(){
 require "template.php"
 
 ?>
+
+<script type="text/javascript">
+	
+		$('input[name=username]').on('input', function(){
+			var username = $('input[name=username]').val()
+			$.ajax({
+				method: 'POST',
+				url: 'usernamevalid.php',
+				data: {
+					register : true,
+					username : username
+				},
+				success: function(data){
+					if(data=='invalid'){
+						$('#username_error').html('Username exists')
+					} else if(data=='valid'){
+						$('#username_error').html('Username available')		
+					}
+				}
+			})
+		})
+
+
+</script>
 

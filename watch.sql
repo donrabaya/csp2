@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 03, 2018 at 06:21 PM
+-- Generation Time: Feb 04, 2018 at 06:46 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -44,10 +44,7 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `name`, `username`, `email`, `password`, `type_id`, `last_name`, `address`) VALUES
-(3, 'Fedricco', 'Admin', 'fedriccorabaya@gmail.com', 'c464af817287343305cbd6493c593885695df531', 2, 'Rabaya', 'QC'),
-(18, 'Fedricco', 'donrabaya', 'fedriccorabaya@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Rabaya', 'QC'),
-(19, 'John', 'Doe', 'jd@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Doe', 'QC'),
-(20, 'Black', 'BM', 'BM@gmail.com', 'c464af817287343305cbd6493c593885695df531', 1, 'Market', 'QC');
+(3, 'Fedricco', 'Admin', 'fedriccorabaya@gmail.com', 'c464af817287343305cbd6493c593885695df531', 2, 'Rabaya', 'QC');
 
 -- --------------------------------------------------------
 
@@ -205,7 +202,7 @@ ALTER TABLE `user_orders`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -217,7 +214,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=280;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=283;
 
 --
 -- AUTO_INCREMENT for table `shops`
@@ -235,7 +232,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT for table `user_orders`
 --
 ALTER TABLE `user_orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=174;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
 
 --
 -- Constraints for dumped tables

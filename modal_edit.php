@@ -21,8 +21,8 @@
     echo "<input class='uk-input uk-text-center uk-border-rounded' type='number' name='price' value='$price'></div>";
 	echo "";
 	echo "<div class='uk-modal-footer uk-text-center'>";
-	echo "<input type='button' class='uk-button uk-button-default uk-modal-close uk-margin-right uk-border-rounded uk-width-1-3@s' value='Cancel'>";
-	echo "<input type='submit' class='uk-button uk-button-primary uk-border-rounded thiscolor uk-width-1-3@s' value='Save'></div>";
+	echo "<input type='button' class='uk-button uk-button-default uk-modal-close uk-margin-right uk-width-1-3@s' value='Cancel'>";
+	echo "<input type='submit' class='uk-button uk-button-secondary uk-width-1-3@s' value='Save'></div>";
 	echo "</form></div></div>";
     }
 ?>

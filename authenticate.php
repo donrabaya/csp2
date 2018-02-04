@@ -21,6 +21,5 @@ if(mysqli_num_rows($result)>0){
 	header('location: loginerror.php');
 }
 
-
 ?>
 

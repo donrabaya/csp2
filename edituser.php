@@ -53,8 +53,8 @@ function display_content(){
 			                    </div>
 			                	<div class='uk-margin'>";
 
-			                echo "<a href='userprofile.php'><input type='button' class='uk-button uk-button-default uk-margin-right uk-border-rounded thiscolor heroWhite' value='BACK'></a>";
-			                echo "<input type='submit' class='uk-button uk-button-primary uk-border-rounded thiscolor' value='SAVE'></div></form>";
+			                echo "<a href='userprofile.php'><input type='button' class='uk-button uk-button-default uk-margin-right' value='BACK'></a>";
+			                echo "<input type='submit' class='uk-button uk-button-primary thiscolor' value='SAVE'></div></form>";
 
 			                echo '</div>
 			                </div>
