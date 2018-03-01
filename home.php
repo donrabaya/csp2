@@ -1,10 +1,13 @@
 <?php 
 
-// Hero Header
+function display_title(){
+	echo "Home Page";
+};
 
-echo '<div class="uk-position-relative">
+function display_content(){
+	echo '<div class="uk-position-relative vh">
 		<div class="uk-inline uk-overflow-hidden">
-    	<img  class="imgHeight" src="assets/images/shopback.jpg" alt="" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+    	<img  class="imgHeight" src="assets/images/masterbackground.jpg" alt="" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
     	   <div class="uk-position-center uk-overlay uk-text-center">
     	   		<br>
     	   		<a class="uk-logo"><img class="moon1" src="assets/images/grav.svg"></a>
@@ -21,16 +24,11 @@ echo '<div class="uk-position-relative">
            </div>
     	</div>';
 
-function display_title(){
-	echo "Home Page";
-};
-
-function display_content(){
 	echo '
 		<div id="brand" class="uk-section uk-section-default uk-margin-top">
 	    <div class="uk-container uk-container-small">
 	    	<div class="uk-margin-large-bottom uk-text-center">
-	    		<h3 class="setPink uk-flex-middle">Your Options</h3>
+	    		<h3 class="setPink uk-flex-middle">Supported by</h3>
 	    		<hr class="uk-divider-small">
 	    	</div>
 	    	<div>

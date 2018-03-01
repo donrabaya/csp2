@@ -16,7 +16,7 @@
 	<!-- Jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style1.css">
 	<!-- uikit JS -->
 	<script type="text/javascript" src="assets/js/uikit.min.js"></script>
 	<!-- Fonts -->

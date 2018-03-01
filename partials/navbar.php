@@ -34,7 +34,7 @@ if (isset($_SESSION['username'])) {
 	                    </li>
 	                </ul>
 	            </div>
-	            <div class="uk-navbar-right">
+	            <div class="uk-navbar-right show">
 	            	<ul class="uk-navbar-nav">
 	            		<?php 
 	            		if (isset($_SESSION['username']) && $_SESSION['type_id'] == '2') {

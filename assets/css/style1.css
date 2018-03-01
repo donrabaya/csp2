@@ -30,6 +30,10 @@
 .webname {
 	font-size: 22px !important;
 	font-weight: bold !important;
+	z-index: 1000;
+}
+.show {
+	z-index: 1001;
 }
 .bold {
 	font-weight: bold !important;
@@ -43,11 +47,17 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.profile5 {
+	background-image: url("../images/masterbackground.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 .height {
 	height: 5vw !important;
 }
 .imgHeight {
-	height: 100%;
+	height: 100vh;
 }
 .cartColor {
 	color: black !important;
